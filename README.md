@@ -1,1498 +1,687 @@
-# 00007FF71E2A2586 code around 
-00007FF71E2A2327 | 41:57                    | push r15                                | r15:GetMessageW
-00007FF71E2A2329 | 41:56                    | push r14                                |
-00007FF71E2A232B | 41:55                    | push r13                                | r13:DispatchMessageW
-00007FF71E2A232D | 41:54                    | push r12                                | r12:TranslateMessage
-00007FF71E2A232F | 56                       | push rsi                                |
-00007FF71E2A2330 | 57                       | push rdi                                |
-00007FF71E2A2331 | 55                       | push rbp                                |
-00007FF71E2A2332 | 53                       | push rbx                                |
-00007FF71E2A2333 | B8 F8990000              | mov eax,99F8                            |
-00007FF71E2A2338 | E8 B3761500              | call <tauri-app.sub_7FF71E3F99F0>       |
-00007FF71E2A233D | 48:29C4                  | sub rsp,rax                             |
-00007FF71E2A2340 | 48:89D3                  | mov rbx,rdx                             |
-00007FF71E2A2343 | 48:8BB2 D0010000         | mov rsi,qword ptr ds:[rdx+1D0]          |
-00007FF71E2A234A | 48:8BBA D8010000         | mov rdi,qword ptr ds:[rdx+1D8]          |
-00007FF71E2A2351 | 4C:8D05 80B42B00         | lea r8,qword ptr ds:[7FF71E55D7D8]      | 00007FF71E55D7D8:"get_connectionsexecute_scriptrefresh_access_token_commandcomplete_token_refreshfail_token_refreshcomplete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget
-00007FF71E2A2358 | 41:B9 0F000000           | mov r9d,F                               |
-00007FF71E2A235E | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A2361 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A2364 | E8 FC22C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A2369 | 84C0                     | test al,al                              |
-00007FF71E2A236B | 0F84 DF000000            | je tauri-app.7FF71E2A2450               |
-00007FF71E2A2371 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A2378 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A237F | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A2386 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A238D | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A2395 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A239C | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A23A3 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A23AA | B9 08020000              | mov ecx,208                             |
-00007FF71E2A23AF | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A23B2 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A23B5 | F3:A4                    | rep movsb                               |
-00007FF71E2A23B7 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A23BF | B9 D8030000              | mov ecx,3D8                             |
-00007FF71E2A23C4 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A23C7 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A23CA | F3:A4                    | rep movsb                               |
-00007FF71E2A23CC | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A23CF | 45:8898 D8030000         | mov byte ptr ds:[r8+3D8],r11b           |
-00007FF71E2A23D6 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A23DE | B9 68010000              | mov ecx,168                             |
-00007FF71E2A23E3 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A23E6 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A23E9 | F3:A4                    | rep movsb                               |
-00007FF71E2A23EB | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A23EF | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A23F6 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A23FB | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A2402 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A2406 | 4C:8992 48090000         | mov qword ptr ds:[rdx+948],r10          |
-00007FF71E2A240D | 44:889A 50090000         | mov byte ptr ds:[rdx+950],r11b          |
-00007FF71E2A2414 | E8 6672E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A2419 | 833D 80527A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A2420 | 0F85 29010000            | jne tauri-app.7FF71E2A254F              |
-00007FF71E2A2426 | 48:8B15 63527A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A242D | 4C:8B05 64527A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A2434 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A243C | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A243F | E8 725D0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A2444 | 48:8D15 45587000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A244B | E9 24010000              | jmp tauri-app.7FF71E2A2574              |
-00007FF71E2A2450 | 4C:8D05 90B32B00         | lea r8,qword ptr ds:[7FF71E55D7E7]      | 00007FF71E55D7E7:"execute_scriptrefresh_access_token_commandcomplete_token_refreshfail_token_refreshcomplete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_dire
-00007FF71E2A2457 | 41:B9 0E000000           | mov r9d,E                               |
-00007FF71E2A245D | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A2460 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A2463 | E8 FD21C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A2468 | 84C0                     | test al,al                              |
-00007FF71E2A246A | 0F84 16010000            | je tauri-app.7FF71E2A2586               |
-00007FF71E2A2470 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A2477 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A247E | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A2485 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A248C | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A2494 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A249B | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A24A2 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A24A9 | B9 08020000              | mov ecx,208                             |
-00007FF71E2A24AE | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A24B1 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A24B4 | F3:A4                    | rep movsb                               |
-00007FF71E2A24B6 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A24BE | B9 000F0000              | mov ecx,F00                             |
-00007FF71E2A24C3 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A24C6 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A24C9 | F3:A4                    | rep movsb                               |
-00007FF71E2A24CB | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A24CE | 45:8898 000F0000         | mov byte ptr ds:[r8+F00],r11b           |
-00007FF71E2A24D5 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A24DD | B9 68010000              | mov ecx,168                             |
-00007FF71E2A24E2 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A24E5 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A24E8 | F3:A4                    | rep movsb                               |
-00007FF71E2A24EA | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A24EE | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A24F5 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A24FA | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A2501 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A2505 | 4C:8992 981F0000         | mov qword ptr ds:[rdx+1F98],r10         |
-00007FF71E2A250C | 44:889A A01F0000         | mov byte ptr ds:[rdx+1FA0],r11b         |
-00007FF71E2A2513 | E8 6771E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A2518 | 833D 81517A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A251F | 0F85 60010000            | jne tauri-app.7FF71E2A2685              |
-00007FF71E2A2525 | 48:8B15 64517A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A252C | 4C:8B05 65517A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A2533 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A253B | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A253E | E8 735C0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A2543 | 48:8D15 46577000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A254A | E9 5B010000              | jmp tauri-app.7FF71E2A26AA              |
-00007FF71E2A254F | 48:8B15 7A517A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A2556 | 4C:8B05 7B517A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A255D | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A2565 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A2568 | E8 495C0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A256D | 48:8D15 34577000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A2574 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A257C | E8 193F0400              | call <tauri-app.sub_7FF71E2E649A>       |
-00007FF71E2A2581 | E9 EF1C0000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A2586 | 4C:8D05 68B22B00         | lea r8,qword ptr ds:[7FF71E55D7F5]      | 00007FF71E55D7F5:"refresh_access_token_commandcomplete_token_refreshfail_token_refreshcomplete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_
-00007FF71E2A258D | 41:B9 1C000000           | mov r9d,1C                              |
-00007FF71E2A2593 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A2596 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A2599 | E8 C720C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A259E | 84C0                     | test al,al                              |
-00007FF71E2A25A0 | 0F84 16010000            | je tauri-app.7FF71E2A26BC               |
-00007FF71E2A25A6 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A25AD | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A25B4 | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A25BB | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A25C2 | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A25CA | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A25D1 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A25D8 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A25DF | B9 08020000              | mov ecx,208                             |
-00007FF71E2A25E4 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A25E7 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A25EA | F3:A4                    | rep movsb                               |
-00007FF71E2A25EC | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A25F4 | B9 C8070000              | mov ecx,7C8                             |
-00007FF71E2A25F9 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A25FC | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A25FF | F3:A4                    | rep movsb                               |
-00007FF71E2A2601 | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A2604 | 45:8898 C8070000         | mov byte ptr ds:[r8+7C8],r11b           |
-00007FF71E2A260B | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A2613 | B9 68010000              | mov ecx,168                             |
-00007FF71E2A2618 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A261B | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A261E | F3:A4                    | rep movsb                               |
-00007FF71E2A2620 | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A2624 | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A262B | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A2630 | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A2637 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A263B | 4C:8992 28110000         | mov qword ptr ds:[rdx+1128],r10         |
-00007FF71E2A2642 | 44:889A 30110000         | mov byte ptr ds:[rdx+1130],r11b         |
-00007FF71E2A2649 | E8 3170E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A264E | 833D 4B507A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A2655 | 0F85 60010000            | jne tauri-app.7FF71E2A27BB              |
-00007FF71E2A265B | 48:8B15 2E507A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A2662 | 4C:8B05 2F507A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A2669 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A2671 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A2674 | E8 3D5B0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A2679 | 48:8D15 10567000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A2680 | E9 5B010000              | jmp tauri-app.7FF71E2A27E0              |
-00007FF71E2A2685 | 48:8B15 44507A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A268C | 4C:8B05 45507A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A2693 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A269B | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A269E | E8 135B0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A26A3 | 48:8D15 FE557000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A26AA | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A26B2 | E8 53180400              | call <tauri-app.sub_7FF71E2E3F0A>       |
-00007FF71E2A26B7 | E9 B91B0000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A26BC | 4C:8D05 4EB12B00         | lea r8,qword ptr ds:[7FF71E55D811]      | 00007FF71E55D811:"complete_token_refreshfail_token_refreshcomplete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ign
-00007FF71E2A26C3 | 41:B9 16000000           | mov r9d,16                              |
-00007FF71E2A26C9 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A26CC | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A26CF | E8 911FC8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A26D4 | 84C0                     | test al,al                              |
-00007FF71E2A26D6 | 0F84 16010000            | je tauri-app.7FF71E2A27F2               |
-00007FF71E2A26DC | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A26E3 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A26EA | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A26F1 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A26F8 | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A2700 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A2707 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A270E | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A2715 | B9 08020000              | mov ecx,208                             |
-00007FF71E2A271A | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A271D | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A2720 | F3:A4                    | rep movsb                               |
-00007FF71E2A2722 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A272A | B9 A0020000              | mov ecx,2A0                             |
-00007FF71E2A272F | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A2732 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A2735 | F3:A4                    | rep movsb                               |
-00007FF71E2A2737 | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A273A | 45:8898 A0020000         | mov byte ptr ds:[r8+2A0],r11b           |
-00007FF71E2A2741 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A2749 | B9 68010000              | mov ecx,168                             |
-00007FF71E2A274E | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A2751 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A2754 | F3:A4                    | rep movsb                               |
-00007FF71E2A2756 | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A275A | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A2761 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A2766 | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A276D | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A2771 | 4C:8992 D8060000         | mov qword ptr ds:[rdx+6D8],r10          |
-00007FF71E2A2778 | 44:889A E0060000         | mov byte ptr ds:[rdx+6E0],r11b          |
-00007FF71E2A277F | E8 FB6EE8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A2784 | 833D 154F7A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A278B | 0F85 60010000            | jne tauri-app.7FF71E2A28F1              |
-00007FF71E2A2791 | 48:8B15 F84E7A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A2798 | 4C:8B05 F94E7A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A279F | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A27A7 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A27AA | E8 075A0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A27AF | 48:8D15 DA547000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A27B6 | E9 5B010000              | jmp tauri-app.7FF71E2A2916              |
-00007FF71E2A27BB | 48:8B15 0E4F7A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A27C2 | 4C:8B05 0F4F7A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A27C9 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A27D1 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A27D4 | E8 DD590B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A27D9 | 48:8D15 C8547000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A27E0 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A27E8 | E8 5FFC0300              | call tauri-app.7FF71E2E244C             |
-00007FF71E2A27ED | E9 831A0000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A27F2 | 4C:8D05 2EB02B00         | lea r8,qword ptr ds:[7FF71E55D827]      | 00007FF71E55D827:"fail_token_refreshcomplete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_s
-00007FF71E2A27F9 | 41:B9 12000000           | mov r9d,12                              |
-00007FF71E2A27FF | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A2802 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A2805 | E8 5B1EC8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A280A | 84C0                     | test al,al                              |
-00007FF71E2A280C | 0F84 16010000            | je tauri-app.7FF71E2A2928               |
-00007FF71E2A2812 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A2819 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A2820 | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A2827 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A282E | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A2836 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A283D | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A2844 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A284B | B9 08020000              | mov ecx,208                             |
-00007FF71E2A2850 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A2853 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A2856 | F3:A4                    | rep movsb                               |
-00007FF71E2A2858 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A2860 | B9 A0020000              | mov ecx,2A0                             |
-00007FF71E2A2865 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A2868 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A286B | F3:A4                    | rep movsb                               |
-00007FF71E2A286D | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A2870 | 45:8898 A0020000         | mov byte ptr ds:[r8+2A0],r11b           |
-00007FF71E2A2877 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A287F | B9 68010000              | mov ecx,168                             |
-00007FF71E2A2884 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A2887 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A288A | F3:A4                    | rep movsb                               |
-00007FF71E2A288C | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A2890 | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A2897 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A289C | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A28A3 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A28A7 | 4C:8992 D8060000         | mov qword ptr ds:[rdx+6D8],r10          |
-00007FF71E2A28AE | 44:889A E0060000         | mov byte ptr ds:[rdx+6E0],r11b          |
-00007FF71E2A28B5 | E8 C56DE8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A28BA | 833D DF4D7A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A28C1 | 0F85 60010000            | jne tauri-app.7FF71E2A2A27              |
-00007FF71E2A28C7 | 48:8B15 C24D7A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A28CE | 4C:8B05 C34D7A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A28D5 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A28DD | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A28E0 | E8 D1580B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A28E5 | 48:8D15 A4537000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A28EC | E9 5B010000              | jmp tauri-app.7FF71E2A2A4C              |
-00007FF71E2A28F1 | 48:8B15 D84D7A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A28F8 | 4C:8B05 D94D7A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A28FF | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A2907 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A290A | E8 A7580B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A290F | 48:8D15 92537000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A2916 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A291E | E8 6DEC0300              | call <tauri-app.sub_7FF71E2E1590>       |
-00007FF71E2A2923 | E9 4D190000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A2928 | 4C:8D05 0AAF2B00         | lea r8,qword ptr ds:[7FF71E55D839]      | 00007FF71E55D839:"complete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_clie
-00007FF71E2A292F | 41:B9 1F000000           | mov r9d,1F                              |
-00007FF71E2A2935 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A2938 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A293B | E8 251DC8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A2940 | 84C0                     | test al,al                              |
-00007FF71E2A2942 | 0F84 16010000            | je tauri-app.7FF71E2A2A5E               |
-00007FF71E2A2948 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A294F | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A2956 | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A295D | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A2964 | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A296C | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A2973 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A297A | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A2981 | B9 08020000              | mov ecx,208                             |
-00007FF71E2A2986 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A2989 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A298C | F3:A4                    | rep movsb                               |
-00007FF71E2A298E | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A2996 | B9 88050000              | mov ecx,588                             |
-00007FF71E2A299B | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A299E | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A29A1 | F3:A4                    | rep movsb                               |
-00007FF71E2A29A3 | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A29A6 | 45:8898 88050000         | mov byte ptr ds:[r8+588],r11b           |
-00007FF71E2A29AD | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A29B5 | B9 68010000              | mov ecx,168                             |
-00007FF71E2A29BA | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A29BD | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A29C0 | F3:A4                    | rep movsb                               |
-00007FF71E2A29C2 | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A29C6 | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A29CD | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A29D2 | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A29D9 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A29DD | 4C:8992 A80C0000         | mov qword ptr ds:[rdx+CA8],r10          |
-00007FF71E2A29E4 | 44:889A B00C0000         | mov byte ptr ds:[rdx+CB0],r11b          |
-00007FF71E2A29EB | E8 8F6CE8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A29F0 | 833D A94C7A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A29F7 | 0F85 60010000            | jne tauri-app.7FF71E2A2B5D              |
-00007FF71E2A29FD | 48:8B15 8C4C7A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A2A04 | 4C:8B05 8D4C7A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A2A0B | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A2A13 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A2A16 | E8 9B570B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A2A1B | 48:8D15 6E527000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A2A22 | E9 5B010000              | jmp tauri-app.7FF71E2A2B82              |
-00007FF71E2A2A27 | 48:8B15 A24C7A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A2A2E | 4C:8B05 A34C7A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A2A35 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A2A3D | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A2A40 | E8 71570B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A2A45 | 48:8D15 5C527000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A2A4C | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A2A54 | E8 E9DD0300              | call <tauri-app.sub_7FF71E2E0842>       |
-00007FF71E2A2A59 | E9 17180000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A2A5E | 4C:8D05 F3AD2B00         | lea r8,qword ptr ds:[7FF71E55D858]      | 00007FF71E55D858:"read_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdg
-00007FF71E2A2A65 | 41:B9 09000000           | mov r9d,9                               | 09:'\t'
-00007FF71E2A2A6B | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A2A6E | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A2A71 | E8 EF1BC8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A2A76 | 84C0                     | test al,al                              |
-00007FF71E2A2A78 | 0F84 16010000            | je tauri-app.7FF71E2A2B94               |
-00007FF71E2A2A7E | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A2A85 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A2A8C | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A2A93 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A2A9A | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A2AA2 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A2AA9 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A2AB0 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A2AB7 | B9 08020000              | mov ecx,208                             |
-00007FF71E2A2ABC | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A2ABF | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A2AC2 | F3:A4                    | rep movsb                               |
-00007FF71E2A2AC4 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A2ACC | B9 A8030000              | mov ecx,3A8                             |
-00007FF71E2A2AD1 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A2AD4 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A2AD7 | F3:A4                    | rep movsb                               |
-00007FF71E2A2AD9 | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A2ADC | 45:8898 A8030000         | mov byte ptr ds:[r8+3A8],r11b           |
-00007FF71E2A2AE3 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A2AEB | B9 68010000              | mov ecx,168                             |
-00007FF71E2A2AF0 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A2AF3 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A2AF6 | F3:A4                    | rep movsb                               |
-00007FF71E2A2AF8 | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A2AFC | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A2B03 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A2B08 | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A2B0F | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A2B13 | 4C:8992 E8080000         | mov qword ptr ds:[rdx+8E8],r10          |
-00007FF71E2A2B1A | 44:889A F0080000         | mov byte ptr ds:[rdx+8F0],r11b          |
-00007FF71E2A2B21 | E8 596BE8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A2B26 | 833D 734B7A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A2B2D | 0F85 60010000            | jne tauri-app.7FF71E2A2C93              |
-00007FF71E2A2B33 | 48:8B15 564B7A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A2B3A | 4C:8B05 574B7A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A2B41 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A2B49 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A2B4C | E8 65560B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A2B51 | 48:8D15 38517000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A2B58 | E9 5B010000              | jmp tauri-app.7FF71E2A2CB8              |
-00007FF71E2A2B5D | 48:8B15 6C4B7A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A2B64 | 4C:8B05 6D4B7A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A2B6B | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A2B73 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A2B76 | E8 3B560B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A2B7B | 48:8D15 26517000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A2B82 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A2B8A | E8 29C30300              | call tauri-app.7FF71E2DEEB8             |
-00007FF71E2A2B8F | E9 E1160000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A2B94 | 4C:8D05 C6AC2B00         | lea r8,qword ptr ds:[7FF71E55D861]      | 00007FF71E55D861:"read_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_valida
-00007FF71E2A2B9B | 41:B9 10000000           | mov r9d,10                              |
-00007FF71E2A2BA1 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A2BA4 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A2BA7 | E8 B91AC8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A2BAC | 84C0                     | test al,al                              |
-00007FF71E2A2BAE | 0F84 16010000            | je tauri-app.7FF71E2A2CCA               |
-00007FF71E2A2BB4 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A2BBB | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A2BC2 | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A2BC9 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A2BD0 | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A2BD8 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A2BDF | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A2BE6 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A2BED | B9 08020000              | mov ecx,208                             |
-00007FF71E2A2BF2 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A2BF5 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A2BF8 | F3:A4                    | rep movsb                               |
-00007FF71E2A2BFA | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A2C02 | B9 A8030000              | mov ecx,3A8                             |
-00007FF71E2A2C07 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A2C0A | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A2C0D | F3:A4                    | rep movsb                               |
-00007FF71E2A2C0F | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A2C12 | 45:8898 A8030000         | mov byte ptr ds:[r8+3A8],r11b           |
-00007FF71E2A2C19 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A2C21 | B9 68010000              | mov ecx,168                             |
-00007FF71E2A2C26 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A2C29 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A2C2C | F3:A4                    | rep movsb                               |
-00007FF71E2A2C2E | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A2C32 | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A2C39 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A2C3E | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A2C45 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A2C49 | 4C:8992 E8080000         | mov qword ptr ds:[rdx+8E8],r10          |
-00007FF71E2A2C50 | 44:889A F0080000         | mov byte ptr ds:[rdx+8F0],r11b          |
-00007FF71E2A2C57 | E8 236AE8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A2C5C | 833D 3D4A7A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A2C63 | 0F85 60010000            | jne tauri-app.7FF71E2A2DC9              |
-00007FF71E2A2C69 | 48:8B15 204A7A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A2C70 | 4C:8B05 214A7A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A2C77 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A2C7F | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A2C82 | E8 2F550B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A2C87 | 48:8D15 02507000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A2C8E | E9 5B010000              | jmp tauri-app.7FF71E2A2DEE              |
-00007FF71E2A2C93 | 48:8B15 364A7A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A2C9A | 4C:8B05 374A7A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A2CA1 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A2CA9 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A2CAC | E8 05550B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A2CB1 | 48:8D15 F04F7000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A2CB8 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A2CC0 | E8 88AC0300              | call tauri-app.7FF71E2DD94D             |
-00007FF71E2A2CC5 | E9 AB150000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A2CCA | 4C:8D05 A0AB2B00         | lea r8,qword ptr ds:[7FF71E55D871]      | 00007FF71E55D871:"write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_
-00007FF71E2A2CD1 | 41:B9 0A000000           | mov r9d,A                               | 0A:'\n'
-00007FF71E2A2CD7 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A2CDA | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A2CDD | E8 8319C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A2CE2 | 84C0                     | test al,al                              |
-00007FF71E2A2CE4 | 0F84 16010000            | je tauri-app.7FF71E2A2E00               |
-00007FF71E2A2CEA | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A2CF1 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A2CF8 | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A2CFF | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A2D06 | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A2D0E | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A2D15 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A2D1C | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A2D23 | B9 08020000              | mov ecx,208                             |
-00007FF71E2A2D28 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A2D2B | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A2D2E | F3:A4                    | rep movsb                               |
-00007FF71E2A2D30 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A2D38 | B9 40050000              | mov ecx,540                             |
-00007FF71E2A2D3D | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A2D40 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A2D43 | F3:A4                    | rep movsb                               |
-00007FF71E2A2D45 | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A2D48 | 45:8898 40050000         | mov byte ptr ds:[r8+540],r11b           |
-00007FF71E2A2D4F | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A2D57 | B9 68010000              | mov ecx,168                             |
-00007FF71E2A2D5C | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A2D5F | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A2D62 | F3:A4                    | rep movsb                               |
-00007FF71E2A2D64 | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A2D68 | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A2D6F | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A2D74 | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A2D7B | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A2D7F | 4C:8992 180C0000         | mov qword ptr ds:[rdx+C18],r10          |
-00007FF71E2A2D86 | 44:889A 200C0000         | mov byte ptr ds:[rdx+C20],r11b          |
-00007FF71E2A2D8D | E8 ED68E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A2D92 | 833D 07497A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A2D99 | 0F85 60010000            | jne tauri-app.7FF71E2A2EFF              |
-00007FF71E2A2D9F | 48:8B15 EA487A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A2DA6 | 4C:8B05 EB487A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A2DAD | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A2DB5 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A2DB8 | E8 F9530B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A2DBD | 48:8D15 CC4E7000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A2DC4 | E9 5B010000              | jmp tauri-app.7FF71E2A2F24              |
-00007FF71E2A2DC9 | 48:8B15 00497A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A2DD0 | 4C:8B05 01497A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A2DD7 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A2DDF | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A2DE2 | E8 CF530B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A2DE7 | 48:8D15 BA4E7000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A2DEE | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A2DF6 | E8 4E8B0300              | call <tauri-app.sub_7FF71E2DB949>       |
-00007FF71E2A2DFB | E9 75140000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A2E00 | 4C:8D05 74AA2B00         | lea r8,qword ptr ds:[7FF71E55D87B]      | 00007FF71E55D87B:"rename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidat
-00007FF71E2A2E07 | 41:B9 0B000000           | mov r9d,B                               | 0B:'\v'
-00007FF71E2A2E0D | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A2E10 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A2E13 | E8 4D18C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A2E18 | 84C0                     | test al,al                              |
-00007FF71E2A2E1A | 0F84 16010000            | je tauri-app.7FF71E2A2F36               |
-00007FF71E2A2E20 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A2E27 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A2E2E | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A2E35 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A2E3C | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A2E44 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A2E4B | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A2E52 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A2E59 | B9 08020000              | mov ecx,208                             |
-00007FF71E2A2E5E | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A2E61 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A2E64 | F3:A4                    | rep movsb                               |
-00007FF71E2A2E66 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A2E6E | B9 88050000              | mov ecx,588                             |
-00007FF71E2A2E73 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A2E76 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A2E79 | F3:A4                    | rep movsb                               |
-00007FF71E2A2E7B | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A2E7E | 45:8898 88050000         | mov byte ptr ds:[r8+588],r11b           |
-00007FF71E2A2E85 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A2E8D | B9 68010000              | mov ecx,168                             |
-00007FF71E2A2E92 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A2E95 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A2E98 | F3:A4                    | rep movsb                               |
-00007FF71E2A2E9A | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A2E9E | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A2EA5 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A2EAA | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A2EB1 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A2EB5 | 4C:8992 A80C0000         | mov qword ptr ds:[rdx+CA8],r10          |
-00007FF71E2A2EBC | 44:889A B00C0000         | mov byte ptr ds:[rdx+CB0],r11b          |
-00007FF71E2A2EC3 | E8 B767E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A2EC8 | 833D D1477A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A2ECF | 0F85 60010000            | jne tauri-app.7FF71E2A3035              |
-00007FF71E2A2ED5 | 48:8B15 B4477A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A2EDC | 4C:8B05 B5477A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A2EE3 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A2EEB | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A2EEE | E8 C3520B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A2EF3 | 48:8D15 964D7000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A2EFA | E9 5B010000              | jmp tauri-app.7FF71E2A305A              |
-00007FF71E2A2EFF | 48:8B15 CA477A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A2F06 | 4C:8B05 CB477A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A2F0D | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A2F15 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A2F18 | E8 99520B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A2F1D | 48:8D15 844D7000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A2F24 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A2F2C | E8 81780300              | call <tauri-app.sub_7FF71E2DA7B2>       |
-00007FF71E2A2F31 | E9 3F130000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A2F36 | 4C:8D05 49A92B00         | lea r8,qword ptr ds:[7FF71E55D886]      | 00007FF71E55D886:"delete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_pa
-00007FF71E2A2F3D | 41:B9 0B000000           | mov r9d,B                               | 0B:'\v'
-00007FF71E2A2F43 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A2F46 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A2F49 | E8 1717C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A2F4E | 84C0                     | test al,al                              |
-00007FF71E2A2F50 | 0F84 16010000            | je tauri-app.7FF71E2A306C               |
-00007FF71E2A2F56 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A2F5D | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A2F64 | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A2F6B | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A2F72 | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A2F7A | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A2F81 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A2F88 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A2F8F | B9 08020000              | mov ecx,208                             |
-00007FF71E2A2F94 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A2F97 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A2F9A | F3:A4                    | rep movsb                               |
-00007FF71E2A2F9C | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A2FA4 | B9 08040000              | mov ecx,408                             |
-00007FF71E2A2FA9 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A2FAC | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A2FAF | F3:A4                    | rep movsb                               |
-00007FF71E2A2FB1 | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A2FB4 | 45:8898 08040000         | mov byte ptr ds:[r8+408],r11b           |
-00007FF71E2A2FBB | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A2FC3 | B9 68010000              | mov ecx,168                             |
-00007FF71E2A2FC8 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A2FCB | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A2FCE | F3:A4                    | rep movsb                               |
-00007FF71E2A2FD0 | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A2FD4 | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A2FDB | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A2FE0 | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A2FE7 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A2FEB | 4C:8992 A8090000         | mov qword ptr ds:[rdx+9A8],r10          |
-00007FF71E2A2FF2 | 44:889A B0090000         | mov byte ptr ds:[rdx+9B0],r11b          |
-00007FF71E2A2FF9 | E8 8166E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A2FFE | 833D 9B467A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A3005 | 0F85 60010000            | jne tauri-app.7FF71E2A316B              |
-00007FF71E2A300B | 48:8B15 7E467A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A3012 | 4C:8B05 7F467A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A3019 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A3021 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3024 | E8 8D510B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3029 | 48:8D15 604C7000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3030 | E9 5B010000              | jmp tauri-app.7FF71E2A3190              |
-00007FF71E2A3035 | 48:8B15 94467A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A303C | 4C:8B05 95467A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A3043 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A304B | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A304E | E8 63510B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3053 | 48:8D15 4E4C7000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A305A | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3062 | E8 6C670300              | call <tauri-app.sub_7FF71E2D97D3>       |
-00007FF71E2A3067 | E9 09120000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A306C | 4C:8D05 1EA82B00         | lea r8,qword ptr ds:[7FF71E55D891]      | 00007FF71E55D891:"copy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_path_cmdroblo
-00007FF71E2A3073 | 41:B9 09000000           | mov r9d,9                               | 09:'\t'
-00007FF71E2A3079 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A307C | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A307F | E8 E115C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A3084 | 84C0                     | test al,al                              |
-00007FF71E2A3086 | 0F84 16010000            | je tauri-app.7FF71E2A31A2               |
-00007FF71E2A308C | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A3093 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A309A | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A30A1 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A30A8 | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A30B0 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A30B7 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A30BE | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A30C5 | B9 08020000              | mov ecx,208                             |
-00007FF71E2A30CA | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A30CD | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A30D0 | F3:A4                    | rep movsb                               |
-00007FF71E2A30D2 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A30DA | B9 88050000              | mov ecx,588                             |
-00007FF71E2A30DF | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A30E2 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A30E5 | F3:A4                    | rep movsb                               |
-00007FF71E2A30E7 | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A30EA | 45:8898 88050000         | mov byte ptr ds:[r8+588],r11b           |
-00007FF71E2A30F1 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A30F9 | B9 68010000              | mov ecx,168                             |
-00007FF71E2A30FE | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3101 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A3104 | F3:A4                    | rep movsb                               |
-00007FF71E2A3106 | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A310A | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A3111 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A3116 | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A311D | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A3121 | 4C:8992 A80C0000         | mov qword ptr ds:[rdx+CA8],r10          |
-00007FF71E2A3128 | 44:889A B00C0000         | mov byte ptr ds:[rdx+CB0],r11b          |
-00007FF71E2A312F | E8 4B65E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A3134 | 833D 65457A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A313B | 0F85 60010000            | jne tauri-app.7FF71E2A32A1              |
-00007FF71E2A3141 | 48:8B15 48457A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A3148 | 4C:8B05 49457A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A314F | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A3157 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A315A | E8 57500B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A315F | 48:8D15 2A4B7000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3166 | E9 5B010000              | jmp tauri-app.7FF71E2A32C6              |
-00007FF71E2A316B | 48:8B15 5E457A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A3172 | 4C:8B05 5F457A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A3179 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A3181 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3184 | E8 2D500B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3189 | 48:8D15 184B7000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3190 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3198 | E8 54590300              | call <tauri-app.sub_7FF71E2D8AF1>       |
-00007FF71E2A319D | E9 D3100000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A31A2 | 4C:8D05 F1A62B00         | lea r8,qword ptr ds:[7FF71E55D89A]      | 00007FF71E55D89A:"file_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_path_cmdroblox_exists_
-00007FF71E2A31A9 | 41:B9 0B000000           | mov r9d,B                               | 0B:'\v'
-00007FF71E2A31AF | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A31B2 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A31B5 | E8 AB14C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A31BA | 84C0                     | test al,al                              |
-00007FF71E2A31BC | 0F84 16010000            | je tauri-app.7FF71E2A32D8               |
-00007FF71E2A31C2 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A31C9 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A31D0 | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A31D7 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A31DE | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A31E6 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A31ED | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A31F4 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A31FB | B9 08020000              | mov ecx,208                             |
-00007FF71E2A3200 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3203 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A3206 | F3:A4                    | rep movsb                               |
-00007FF71E2A3208 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A3210 | B9 88020000              | mov ecx,288                             |
-00007FF71E2A3215 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A3218 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A321B | F3:A4                    | rep movsb                               |
-00007FF71E2A321D | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A3220 | 45:8898 88020000         | mov byte ptr ds:[r8+288],r11b           |
-00007FF71E2A3227 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A322F | B9 68010000              | mov ecx,168                             |
-00007FF71E2A3234 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3237 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A323A | F3:A4                    | rep movsb                               |
-00007FF71E2A323C | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A3240 | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A3247 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A324C | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A3253 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A3257 | 4C:8992 A8060000         | mov qword ptr ds:[rdx+6A8],r10          |
-00007FF71E2A325E | 44:889A B0060000         | mov byte ptr ds:[rdx+6B0],r11b          |
-00007FF71E2A3265 | E8 1564E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A326A | 833D 2F447A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A3271 | 0F85 60010000            | jne tauri-app.7FF71E2A33D7              |
-00007FF71E2A3277 | 48:8B15 12447A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A327E | 4C:8B05 13447A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A3285 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A328D | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3290 | E8 214F0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3295 | 48:8D15 F4497000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A329C | E9 5B010000              | jmp tauri-app.7FF71E2A33FC              |
-00007FF71E2A32A1 | 48:8B15 28447A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A32A8 | 4C:8B05 29447A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A32AF | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A32B7 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A32BA | E8 F74E0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A32BF | 48:8D15 E2497000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A32C6 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A32CE | E8 A03D0300              | call <tauri-app.sub_7FF71E2D7073>       |
-00007FF71E2A32D3 | E9 9D0F0000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A32D8 | 4C:8D05 C6A52B00         | lea r8,qword ptr ds:[7FF71E55D8A5]      | 00007FF71E55D8A5:"open_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_path_cmdroblox_exists_cmdget_robl
-00007FF71E2A32DF | 41:B9 10000000           | mov r9d,10                              |
-00007FF71E2A32E5 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A32E8 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A32EB | E8 7513C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A32F0 | 84C0                     | test al,al                              |
-00007FF71E2A32F2 | 0F84 16010000            | je tauri-app.7FF71E2A340E               |
-00007FF71E2A32F8 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A32FF | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A3306 | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A330D | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A3314 | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A331C | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A3323 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A332A | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A3331 | B9 08020000              | mov ecx,208                             |
-00007FF71E2A3336 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3339 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A333C | F3:A4                    | rep movsb                               |
-00007FF71E2A333E | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A3346 | B9 08040000              | mov ecx,408                             |
-00007FF71E2A334B | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A334E | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A3351 | F3:A4                    | rep movsb                               |
-00007FF71E2A3353 | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A3356 | 45:8898 08040000         | mov byte ptr ds:[r8+408],r11b           |
-00007FF71E2A335D | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3365 | B9 68010000              | mov ecx,168                             |
-00007FF71E2A336A | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A336D | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A3370 | F3:A4                    | rep movsb                               |
-00007FF71E2A3372 | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A3376 | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A337D | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A3382 | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A3389 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A338D | 4C:8992 A8090000         | mov qword ptr ds:[rdx+9A8],r10          |
-00007FF71E2A3394 | 44:889A B0090000         | mov byte ptr ds:[rdx+9B0],r11b          |
-00007FF71E2A339B | E8 DF62E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A33A0 | 833D F9427A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A33A7 | 0F85 60010000            | jne tauri-app.7FF71E2A350D              |
-00007FF71E2A33AD | 48:8B15 DC427A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A33B4 | 4C:8B05 DD427A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A33BB | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A33C3 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A33C6 | E8 EB4D0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A33CB | 48:8D15 BE487000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A33D2 | E9 5B010000              | jmp tauri-app.7FF71E2A3532              |
-00007FF71E2A33D7 | 48:8B15 F2427A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A33DE | 4C:8B05 F3427A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A33E5 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A33ED | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A33F0 | E8 C14D0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A33F5 | 48:8D15 AC487000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A33FC | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3404 | E8 55310300              | call <tauri-app.sub_7FF71E2D655E>       |
-00007FF71E2A3409 | E9 670E0000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A340E | 4C:8D05 A0A42B00         | lea r8,qword ptr ds:[7FF71E55D8B5]      | 00007FF71E55D8B5:"save_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_path_cmdroblox_exists_cmdget_roblox_exe_path_cmdg
-00007FF71E2A3415 | 41:B9 10000000           | mov r9d,10                              |
-00007FF71E2A341B | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A341E | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A3421 | E8 3F12C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A3426 | 84C0                     | test al,al                              |
-00007FF71E2A3428 | 0F84 16010000            | je tauri-app.7FF71E2A3544               |
-00007FF71E2A342E | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A3435 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A343C | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A3443 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A344A | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A3452 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A3459 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A3460 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A3467 | B9 08020000              | mov ecx,208                             |
-00007FF71E2A346C | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A346F | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A3472 | F3:A4                    | rep movsb                               |
-00007FF71E2A3474 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A347C | B9 08040000              | mov ecx,408                             |
-00007FF71E2A3481 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A3484 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A3487 | F3:A4                    | rep movsb                               |
-00007FF71E2A3489 | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A348C | 45:8898 08040000         | mov byte ptr ds:[r8+408],r11b           |
-00007FF71E2A3493 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A349B | B9 68010000              | mov ecx,168                             |
-00007FF71E2A34A0 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A34A3 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A34A6 | F3:A4                    | rep movsb                               |
-00007FF71E2A34A8 | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A34AC | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A34B3 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A34B8 | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A34BF | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A34C3 | 4C:8992 A8090000         | mov qword ptr ds:[rdx+9A8],r10          |
-00007FF71E2A34CA | 44:889A B0090000         | mov byte ptr ds:[rdx+9B0],r11b          |
-00007FF71E2A34D1 | E8 A961E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A34D6 | 833D C3417A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A34DD | 0F85 60010000            | jne tauri-app.7FF71E2A3643              |
-00007FF71E2A34E3 | 48:8B15 A6417A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A34EA | 4C:8B05 A7417A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A34F1 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A34F9 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A34FC | E8 B54C0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3501 | 48:8D15 88477000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3508 | E9 5B010000              | jmp tauri-app.7FF71E2A3668              |
-00007FF71E2A350D | 48:8B15 BC417A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A3514 | 4C:8B05 BD417A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A351B | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A3523 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3526 | E8 8B4C0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A352B | 48:8D15 76477000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3532 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A353A | E8 DB1F0300              | call <tauri-app.sub_7FF71E2D551A>       |
-00007FF71E2A353F | E9 310D0000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A3544 | 4C:8D05 7AA32B00         | lea r8,qword ptr ds:[7FF71E55D8C5]      | 00007FF71E55D8C5:"open_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_path_cmdroblox_exists_cmdget_roblox_exe_path_cmdget_roblox_versio
-00007FF71E2A354B | 41:B9 16000000           | mov r9d,16                              |
-00007FF71E2A3551 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A3554 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A3557 | E8 0911C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A355C | 84C0                     | test al,al                              |
-00007FF71E2A355E | 0F84 16010000            | je tauri-app.7FF71E2A367A               |
-00007FF71E2A3564 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A356B | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A3572 | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A3579 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A3580 | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A3588 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A358F | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A3596 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A359D | B9 08020000              | mov ecx,208                             |
-00007FF71E2A35A2 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A35A5 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A35A8 | F3:A4                    | rep movsb                               |
-00007FF71E2A35AA | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A35B2 | B9 08040000              | mov ecx,408                             |
-00007FF71E2A35B7 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A35BA | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A35BD | F3:A4                    | rep movsb                               |
-00007FF71E2A35BF | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A35C2 | 45:8898 08040000         | mov byte ptr ds:[r8+408],r11b           |
-00007FF71E2A35C9 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A35D1 | B9 68010000              | mov ecx,168                             |
-00007FF71E2A35D6 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A35D9 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A35DC | F3:A4                    | rep movsb                               |
-00007FF71E2A35DE | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A35E2 | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A35E9 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A35EE | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A35F5 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A35F9 | 4C:8992 A8090000         | mov qword ptr ds:[rdx+9A8],r10          |
-00007FF71E2A3600 | 44:889A B0090000         | mov byte ptr ds:[rdx+9B0],r11b          |
-00007FF71E2A3607 | E8 7360E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A360C | 833D 8D407A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A3613 | 0F85 60010000            | jne tauri-app.7FF71E2A3779              |
-00007FF71E2A3619 | 48:8B15 70407A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A3620 | 4C:8B05 71407A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A3627 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A362F | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3632 | E8 7F4B0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3637 | 48:8D15 52467000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A363E | E9 5B010000              | jmp tauri-app.7FF71E2A379E              |
-00007FF71E2A3643 | 48:8B15 86407A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A364A | 4C:8B05 87407A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A3651 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A3659 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A365C | E8 554B0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3661 | 48:8D15 40467000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3668 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3670 | E8 720E0300              | call <tauri-app.sub_7FF71E2D44E7>       |
-00007FF71E2A3675 | E9 FB0B0000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A367A | 4C:8D05 5AA22B00         | lea r8,qword ptr ds:[7FF71E55D8DB]      | 00007FF71E55D8DB:"open_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_path_cmdroblox_exists_cmdget_roblox_exe_path_cmdget_roblox_version_cmdpick_roblox_direc
-00007FF71E2A3681 | 41:B9 1C000000           | mov r9d,1C                              |
-00007FF71E2A3687 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A368A | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A368D | E8 D30FC8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A3692 | 84C0                     | test al,al                              |
-00007FF71E2A3694 | 0F84 16010000            | je tauri-app.7FF71E2A37B0               |
-00007FF71E2A369A | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A36A1 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A36A8 | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A36AF | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A36B6 | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A36BE | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A36C5 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A36CC | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A36D3 | B9 08020000              | mov ecx,208                             |
-00007FF71E2A36D8 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A36DB | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A36DE | F3:A4                    | rep movsb                               |
-00007FF71E2A36E0 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A36E8 | B9 08040000              | mov ecx,408                             |
-00007FF71E2A36ED | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A36F0 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A36F3 | F3:A4                    | rep movsb                               |
-00007FF71E2A36F5 | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A36F8 | 45:8898 08040000         | mov byte ptr ds:[r8+408],r11b           |
-00007FF71E2A36FF | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3707 | B9 68010000              | mov ecx,168                             |
-00007FF71E2A370C | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A370F | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A3712 | F3:A4                    | rep movsb                               |
-00007FF71E2A3714 | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A3718 | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A371F | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A3724 | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A372B | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A372F | 4C:8992 A8090000         | mov qword ptr ds:[rdx+9A8],r10          |
-00007FF71E2A3736 | 44:889A B0090000         | mov byte ptr ds:[rdx+9B0],r11b          |
-00007FF71E2A373D | E8 3D5FE8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A3742 | 833D 573F7A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A3749 | 0F85 60010000            | jne tauri-app.7FF71E2A38AF              |
-00007FF71E2A374F | 48:8B15 3A3F7A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A3756 | 4C:8B05 3B3F7A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A375D | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A3765 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3768 | E8 494A0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A376D | 48:8D15 1C457000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3774 | E9 5B010000              | jmp tauri-app.7FF71E2A38D4              |
-00007FF71E2A3779 | 48:8B15 503F7A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A3780 | 4C:8B05 513F7A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A3787 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A378F | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3792 | E8 1F4A0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3797 | 48:8D15 0A457000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A379E | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A37A6 | E8 D1FD0200              | call <tauri-app.sub_7FF71E2D357C>       |
-00007FF71E2A37AB | E9 C50A0000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A37B0 | 4C:8D05 40A12B00         | lea r8,qword ptr ds:[7FF71E55D8F7]      | 00007FF71E55D8F7:"save_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_path_cmdroblox_exists_cmdget_roblox_exe_path_cmdget_roblox_version_cmdpick_roblox_directoryvalidate_and_update_robl
-00007FF71E2A37B7 | 41:B9 16000000           | mov r9d,16                              |
-00007FF71E2A37BD | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A37C0 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A37C3 | E8 9D0EC8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A37C8 | 84C0                     | test al,al                              |
-00007FF71E2A37CA | 0F84 16010000            | je tauri-app.7FF71E2A38E6               |
-00007FF71E2A37D0 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A37D7 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A37DE | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A37E5 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A37EC | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A37F4 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A37FB | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A3802 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A3809 | B9 08020000              | mov ecx,208                             |
-00007FF71E2A380E | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3811 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A3814 | F3:A4                    | rep movsb                               |
-00007FF71E2A3816 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A381E | B9 50040000              | mov ecx,450                             |
-00007FF71E2A3823 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A3826 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A3829 | F3:A4                    | rep movsb                               |
-00007FF71E2A382B | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A382E | 45:8898 50040000         | mov byte ptr ds:[r8+450],r11b           |
-00007FF71E2A3835 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A383D | B9 68010000              | mov ecx,168                             |
-00007FF71E2A3842 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3845 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A3848 | F3:A4                    | rep movsb                               |
-00007FF71E2A384A | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A384E | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A3855 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A385A | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A3861 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A3865 | 4C:8992 380A0000         | mov qword ptr ds:[rdx+A38],r10          |
-00007FF71E2A386C | 44:889A 400A0000         | mov byte ptr ds:[rdx+A40],r11b          |
-00007FF71E2A3873 | E8 075EE8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A3878 | 833D 213E7A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A387F | 0F85 60010000            | jne tauri-app.7FF71E2A39E5              |
-00007FF71E2A3885 | 48:8B15 043E7A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A388C | 4C:8B05 053E7A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A3893 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A389B | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A389E | E8 13490B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A38A3 | 48:8D15 E6437000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A38AA | E9 5B010000              | jmp tauri-app.7FF71E2A3A0A              |
-00007FF71E2A38AF | 48:8B15 1A3E7A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A38B6 | 4C:8B05 1B3E7A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A38BD | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A38C5 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A38C8 | E8 E9480B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A38CD | 48:8D15 D4437000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A38D4 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A38DC | E8 03EC0200              | call <tauri-app.sub_7FF71E2D24E4>       |
-00007FF71E2A38E1 | E9 8F090000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A38E6 | 4C:8D05 20A02B00         | lea r8,qword ptr ds:[7FF71E55D90D]      | 00007FF71E55D90D:"save_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_path_cmdroblox_exists_cmdget_roblox_exe_path_cmdget_roblox_version_cmdpick_roblox_directoryvalidate_and_update_roblox_pathget_volt_bin_ve
-00007FF71E2A38ED | 41:B9 14000000           | mov r9d,14                              |
-00007FF71E2A38F3 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A38F6 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A38F9 | E8 670DC8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A38FE | 84C0                     | test al,al                              |
-00007FF71E2A3900 | 0F84 16010000            | je tauri-app.7FF71E2A3A1C               |
-00007FF71E2A3906 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A390D | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A3914 | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A391B | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A3922 | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A392A | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A3931 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A3938 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A393F | B9 08020000              | mov ecx,208                             |
-00007FF71E2A3944 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3947 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A394A | F3:A4                    | rep movsb                               |
-00007FF71E2A394C | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A3954 | B9 00060000              | mov ecx,600                             |
-00007FF71E2A3959 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A395C | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A395F | F3:A4                    | rep movsb                               |
-00007FF71E2A3961 | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A3964 | 45:8898 00060000         | mov byte ptr ds:[r8+600],r11b           |
-00007FF71E2A396B | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3973 | B9 68010000              | mov ecx,168                             |
-00007FF71E2A3978 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A397B | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A397E | F3:A4                    | rep movsb                               |
-00007FF71E2A3980 | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A3984 | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A398B | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A3990 | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A3997 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A399B | 4C:8992 980D0000         | mov qword ptr ds:[rdx+D98],r10          |
-00007FF71E2A39A2 | 44:889A A00D0000         | mov byte ptr ds:[rdx+DA0],r11b          |
-00007FF71E2A39A9 | E8 D15CE8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A39AE | 833D EB3C7A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A39B5 | 0F85 60010000            | jne tauri-app.7FF71E2A3B1B              |
-00007FF71E2A39BB | 48:8B15 CE3C7A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A39C2 | 4C:8B05 CF3C7A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A39C9 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A39D1 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A39D4 | E8 DD470B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A39D9 | 48:8D15 B0427000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A39E0 | E9 5B010000              | jmp tauri-app.7FF71E2A3B40              |
-00007FF71E2A39E5 | 48:8B15 E43C7A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A39EC | 4C:8B05 E53C7A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A39F3 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A39FB | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A39FE | E8 B3470B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3A03 | 48:8D15 9E427000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3A0A | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3A12 | E8 62D00200              | call <tauri-app.sub_7FF71E2D0A79>       |
-00007FF71E2A3A17 | E9 59080000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A3A1C | 4C:8D05 FE9E2B00         | lea r8,qword ptr ds:[7FF71E55D921]      | 00007FF71E55D921:"create_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_path_cmdroblox_exists_cmdget_roblox_exe_path_cmdget_roblox_version_cmdpick_roblox_directoryvalidate_and_update_roblox_pathget_volt_bin_versionget_volt_bin_ve
-00007FF71E2A3A23 | 41:B9 10000000           | mov r9d,10                              |
-00007FF71E2A3A29 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A3A2C | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A3A2F | E8 310CC8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A3A34 | 84C0                     | test al,al                              |
-00007FF71E2A3A36 | 0F84 16010000            | je tauri-app.7FF71E2A3B52               |
-00007FF71E2A3A3C | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A3A43 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A3A4A | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A3A51 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A3A58 | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A3A60 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A3A67 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A3A6E | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A3A75 | B9 08020000              | mov ecx,208                             |
-00007FF71E2A3A7A | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3A7D | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A3A80 | F3:A4                    | rep movsb                               |
-00007FF71E2A3A82 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A3A8A | B9 A8030000              | mov ecx,3A8                             |
-00007FF71E2A3A8F | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A3A92 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A3A95 | F3:A4                    | rep movsb                               |
-00007FF71E2A3A97 | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A3A9A | 45:8898 A8030000         | mov byte ptr ds:[r8+3A8],r11b           |
-00007FF71E2A3AA1 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3AA9 | B9 68010000              | mov ecx,168                             |
-00007FF71E2A3AAE | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3AB1 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A3AB4 | F3:A4                    | rep movsb                               |
-00007FF71E2A3AB6 | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A3ABA | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A3AC1 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A3AC6 | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A3ACD | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A3AD1 | 4C:8992 E8080000         | mov qword ptr ds:[rdx+8E8],r10          |
-00007FF71E2A3AD8 | 44:889A F0080000         | mov byte ptr ds:[rdx+8F0],r11b          |
-00007FF71E2A3ADF | E8 9B5BE8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A3AE4 | 833D B53B7A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A3AEB | 0F85 60010000            | jne tauri-app.7FF71E2A3C51              |
-00007FF71E2A3AF1 | 48:8B15 983B7A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A3AF8 | 4C:8B05 993B7A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A3AFF | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A3B07 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3B0A | E8 A7460B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3B0F | 48:8D15 7A417000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3B16 | E9 5B010000              | jmp tauri-app.7FF71E2A3C76              |
-00007FF71E2A3B1B | 48:8B15 AE3B7A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A3B22 | 4C:8B05 AF3B7A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A3B29 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A3B31 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3B34 | E8 7D460B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3B39 | 48:8D15 68417000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3B40 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3B48 | E8 96B40200              | call tauri-app.7FF71E2CEFE3             |
-00007FF71E2A3B4D | E9 23070000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A3B52 | 4C:8D05 D89D2B00         | lea r8,qword ptr ds:[7FF71E55D931]      | 00007FF71E55D931:"directory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_path_cmdroblox_exists_cmdget_roblox_exe_path_cmdget_roblox_version_cmdpick_roblox_directoryvalidate_and_update_roblox_pathget_volt_bin_versionget_volt_bin_version_infoget_fi
-00007FF71E2A3B59 | 41:B9 10000000           | mov r9d,10                              |
-00007FF71E2A3B5F | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A3B62 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A3B65 | E8 FB0AC8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A3B6A | 84C0                     | test al,al                              |
-00007FF71E2A3B6C | 0F84 16010000            | je tauri-app.7FF71E2A3C88               |
-00007FF71E2A3B72 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A3B79 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A3B80 | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A3B87 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A3B8E | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A3B96 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A3B9D | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A3BA4 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A3BAB | B9 08020000              | mov ecx,208                             |
-00007FF71E2A3BB0 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3BB3 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A3BB6 | F3:A4                    | rep movsb                               |
-00007FF71E2A3BB8 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A3BC0 | B9 88020000              | mov ecx,288                             |
-00007FF71E2A3BC5 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A3BC8 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A3BCB | F3:A4                    | rep movsb                               |
-00007FF71E2A3BCD | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A3BD0 | 45:8898 88020000         | mov byte ptr ds:[r8+288],r11b           |
-00007FF71E2A3BD7 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3BDF | B9 68010000              | mov ecx,168                             |
-00007FF71E2A3BE4 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3BE7 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A3BEA | F3:A4                    | rep movsb                               |
-00007FF71E2A3BEC | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A3BF0 | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A3BF7 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A3BFC | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A3C03 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A3C07 | 4C:8992 A8060000         | mov qword ptr ds:[rdx+6A8],r10          |
-00007FF71E2A3C0E | 44:889A B0060000         | mov byte ptr ds:[rdx+6B0],r11b          |
-00007FF71E2A3C15 | E8 655AE8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A3C1A | 833D 7F3A7A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A3C21 | 0F85 60010000            | jne tauri-app.7FF71E2A3D87              |
-00007FF71E2A3C27 | 48:8B15 623A7A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A3C2E | 4C:8B05 633A7A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A3C35 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A3C3D | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3C40 | E8 71450B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3C45 | 48:8D15 44407000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3C4C | E9 5B010000              | jmp tauri-app.7FF71E2A3DAC              |
-00007FF71E2A3C51 | 48:8B15 783A7A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A3C58 | 4C:8B05 793A7A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A3C5F | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A3C67 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3C6A | E8 47450B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3C6F | 48:8D15 32407000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3C76 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3C7E | E8 47A10200              | call <tauri-app.sub_7FF71E2CDDCA>       |
-00007FF71E2A3C83 | E9 ED050000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A3C88 | 4C:8D05 B29C2B00         | lea r8,qword ptr ds:[7FF71E55D941]      | 00007FF71E55D941:"delete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_path_cmdroblox_exists_cmdget_roblox_exe_path_cmdget_roblox_version_cmdpick_roblox_directoryvalidate_and_update_roblox_pathget_volt_bin_versionget_volt_bin_version_infoget_file_version_cmddo
-00007FF71E2A3C8F | 41:B9 10000000           | mov r9d,10                              |
-00007FF71E2A3C95 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A3C98 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A3C9B | E8 C509C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A3CA0 | 84C0                     | test al,al                              |
-00007FF71E2A3CA2 | 0F84 16010000            | je tauri-app.7FF71E2A3DBE               |
-00007FF71E2A3CA8 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A3CAF | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A3CB6 | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A3CBD | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A3CC4 | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A3CCC | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A3CD3 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A3CDA | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A3CE1 | B9 08020000              | mov ecx,208                             |
-00007FF71E2A3CE6 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3CE9 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A3CEC | F3:A4                    | rep movsb                               |
-00007FF71E2A3CEE | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A3CF6 | B9 08040000              | mov ecx,408                             |
-00007FF71E2A3CFB | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A3CFE | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A3D01 | F3:A4                    | rep movsb                               |
-00007FF71E2A3D03 | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A3D06 | 45:8898 08040000         | mov byte ptr ds:[r8+408],r11b           |
-00007FF71E2A3D0D | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3D15 | B9 68010000              | mov ecx,168                             |
-00007FF71E2A3D1A | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3D1D | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A3D20 | F3:A4                    | rep movsb                               |
-00007FF71E2A3D22 | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A3D26 | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A3D2D | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A3D32 | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A3D39 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A3D3D | 4C:8992 A8090000         | mov qword ptr ds:[rdx+9A8],r10          |
-00007FF71E2A3D44 | 44:889A B0090000         | mov byte ptr ds:[rdx+9B0],r11b          |
-00007FF71E2A3D4B | E8 2F59E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A3D50 | 833D 49397A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A3D57 | 0F85 60010000            | jne tauri-app.7FF71E2A3EBD              |
-00007FF71E2A3D5D | 48:8B15 2C397A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A3D64 | 4C:8B05 2D397A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A3D6B | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A3D73 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3D76 | E8 3B440B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3D7B | 48:8D15 0E3F7000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3D82 | E9 5B010000              | jmp tauri-app.7FF71E2A3EE2              |
-00007FF71E2A3D87 | 48:8B15 42397A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A3D8E | 4C:8B05 43397A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A3D95 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A3D9D | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3DA0 | E8 11440B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3DA5 | 48:8D15 FC3E7000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3DAC | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3DB4 | E8 15950200              | call <tauri-app.sub_7FF71E2CD2CE>       |
-00007FF71E2A3DB9 | E9 B7040000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A3DBE | 4C:8D05 8C9B2B00         | lea r8,qword ptr ds:[7FF71E55D951]      | 00007FF71E55D951:"rename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_path_cmdroblox_exists_cmdget_roblox_exe_path_cmdget_roblox_version_cmdpick_roblox_directoryvalidate_and_update_roblox_pathget_volt_bin_versionget_volt_bin_version_infoget_file_version_cmddownload_file_from
-00007FF71E2A3DC5 | 41:B9 10000000           | mov r9d,10                              |
-00007FF71E2A3DCB | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A3DCE | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A3DD1 | E8 8F08C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A3DD6 | 84C0                     | test al,al                              |
-00007FF71E2A3DD8 | 0F84 16010000            | je tauri-app.7FF71E2A3EF4               |
-00007FF71E2A3DDE | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A3DE5 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A3DEC | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A3DF3 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A3DFA | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A3E02 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A3E09 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A3E10 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A3E17 | B9 08020000              | mov ecx,208                             |
-00007FF71E2A3E1C | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3E1F | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A3E22 | F3:A4                    | rep movsb                               |
-00007FF71E2A3E24 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A3E2C | B9 88050000              | mov ecx,588                             |
-00007FF71E2A3E31 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A3E34 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A3E37 | F3:A4                    | rep movsb                               |
-00007FF71E2A3E39 | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A3E3C | 45:8898 88050000         | mov byte ptr ds:[r8+588],r11b           |
-00007FF71E2A3E43 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3E4B | B9 68010000              | mov ecx,168                             |
-00007FF71E2A3E50 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3E53 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A3E56 | F3:A4                    | rep movsb                               |
-00007FF71E2A3E58 | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A3E5C | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A3E63 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A3E68 | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A3E6F | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A3E73 | 4C:8992 A80C0000         | mov qword ptr ds:[rdx+CA8],r10          |
-00007FF71E2A3E7A | 44:889A B00C0000         | mov byte ptr ds:[rdx+CB0],r11b          |
-00007FF71E2A3E81 | E8 F957E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A3E86 | 833D 13387A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A3E8D | 0F85 60010000            | jne tauri-app.7FF71E2A3FF3              |
-00007FF71E2A3E93 | 48:8B15 F6377A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A3E9A | 4C:8B05 F7377A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A3EA1 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A3EA9 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3EAC | E8 05430B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3EB1 | 48:8D15 D83D7000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3EB8 | E9 5B010000              | jmp tauri-app.7FF71E2A4018              |
-00007FF71E2A3EBD | 48:8B15 0C387A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A3EC4 | 4C:8B05 0D387A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A3ECB | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A3ED3 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3ED6 | E8 DB420B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3EDB | 48:8D15 C63D7000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3EE2 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3EEA | E8 E9810200              | call tauri-app.7FF71E2CC0D8             |
-00007FF71E2A3EEF | E9 81030000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A3EF4 | 4C:8D05 669A2B00         | lea r8,qword ptr ds:[7FF71E55D961]      | 00007FF71E55D961:"list_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_path_cmdroblox_exists_cmdget_roblox_exe_path_cmdget_roblox_version_cmdpick_roblox_directoryvalidate_and_update_roblox_pathget_volt_bin_versionget_volt_bin_version_infoget_file_version_cmddownload_file_from_url_cmdrestore_
-00007FF71E2A3EFB | 41:B9 17000000           | mov r9d,17                              |
-00007FF71E2A3F01 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A3F04 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A3F07 | E8 5907C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A3F0C | 84C0                     | test al,al                              |
-00007FF71E2A3F0E | 0F84 16010000            | je tauri-app.7FF71E2A402A               |
-00007FF71E2A3F14 | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A3F1B | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A3F22 | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A3F29 | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A3F30 | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A3F38 | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A3F3F | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A3F46 | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A3F4D | B9 08020000              | mov ecx,208                             |
-00007FF71E2A3F52 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3F55 | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A3F58 | F3:A4                    | rep movsb                               |
-00007FF71E2A3F5A | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A3F62 | B9 48030000              | mov ecx,348                             |
-00007FF71E2A3F67 | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A3F6A | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A3F6D | F3:A4                    | rep movsb                               |
-00007FF71E2A3F6F | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A3F72 | 45:8898 48030000         | mov byte ptr ds:[r8+348],r11b           |
-00007FF71E2A3F79 | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A3F81 | B9 68010000              | mov ecx,168                             |
-00007FF71E2A3F86 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A3F89 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A3F8C | F3:A4                    | rep movsb                               |
-00007FF71E2A3F8E | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A3F92 | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A3F99 | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A3F9E | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A3FA5 | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A3FA9 | 4C:8992 28080000         | mov qword ptr ds:[rdx+828],r10          |
-00007FF71E2A3FB0 | 44:889A 30080000         | mov byte ptr ds:[rdx+830],r11b          |
-00007FF71E2A3FB7 | E8 C356E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A3FBC | 833D DD367A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A3FC3 | 0F85 60010000            | jne tauri-app.7FF71E2A4129              |
-00007FF71E2A3FC9 | 48:8B15 C0367A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A3FD0 | 4C:8B05 C1367A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A3FD7 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A3FDF | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A3FE2 | E8 CF410B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A3FE7 | 48:8D15 A23C7000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A3FEE | E9 5B010000              | jmp tauri-app.7FF71E2A414E              |
-00007FF71E2A3FF3 | 48:8B15 D6367A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A3FFA | 4C:8B05 D7367A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A4001 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A4009 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A400C | E8 A5410B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A4011 | 48:8D15 903C7000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A4018 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A4020 | E8 2A670200              | call <tauri-app.sub_7FF71E2CA74F>       |
-00007FF71E2A4025 | E9 4B020000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A402A | 4C:8D05 47992B00         | lea r8,qword ptr ds:[7FF71E55D978]      | 00007FF71E55D978:"list_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_path_cmdroblox_exists_cmdget_roblox_exe_path_cmdget_roblox_version_cmdpick_roblox_directoryvalidate_and_update_roblox_pathget_volt_bin_versionget_volt_bin_version_infoget_file_version_cmddownload_file_from_url_cmdrestore_cached_volt_files_cmdca
-00007FF71E2A4031 | 41:B9 16000000           | mov r9d,16                              |
-00007FF71E2A4037 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A403A | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A403D | E8 2306C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A4042 | 84C0                     | test al,al                              |
-00007FF71E2A4044 | 0F84 16010000            | je tauri-app.7FF71E2A4160               |
-00007FF71E2A404A | 48:8D83 08020000         | lea rax,qword ptr ds:[rbx+208]          |
-00007FF71E2A4051 | 4C:8B8B 88030000         | mov r9,qword ptr ds:[rbx+388]           |
-00007FF71E2A4058 | 4C:8B93 90030000         | mov r10,qword ptr ds:[rbx+390]          |
-00007FF71E2A405F | 48:8B8B A8030000         | mov rcx,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A4066 | 48:8D9424 206A0000       | lea rdx,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A406E | 48:898A 18020000         | mov qword ptr ds:[rdx+218],rcx          |
-00007FF71E2A4075 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A407C | 0F1182 08020000          | movups xmmword ptr ds:[rdx+208],xmm0    |
-00007FF71E2A4083 | B9 08020000              | mov ecx,208                             |
-00007FF71E2A4088 | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A408B | 48:89DE                  | mov rsi,rbx                             |
-00007FF71E2A408E | F3:A4                    | rep movsb                               |
-00007FF71E2A4090 | 4C:8D8424 580A0000       | lea r8,qword ptr ss:[rsp+A58]           |
-00007FF71E2A4098 | B9 48030000              | mov ecx,348                             |
-00007FF71E2A409D | 4C:89C7                  | mov rdi,r8                              |
-00007FF71E2A40A0 | 48:89D6                  | mov rsi,rdx                             |
-00007FF71E2A40A3 | F3:A4                    | rep movsb                               |
-00007FF71E2A40A5 | 45:31DB                  | xor r11d,r11d                           |
-00007FF71E2A40A8 | 45:8898 48030000         | mov byte ptr ds:[r8+348],r11b           |
-00007FF71E2A40AF | 48:8D9424 D0080000       | lea rdx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A40B7 | B9 68010000              | mov ecx,168                             |
-00007FF71E2A40BC | 48:89D7                  | mov rdi,rdx                             |
-00007FF71E2A40BF | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A40C2 | F3:A4                    | rep movsb                               |
-00007FF71E2A40C4 | 4D:8948 F8               | mov qword ptr ds:[r8-8],r9              |
-00007FF71E2A40C8 | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A40CF | 41:0F1140 E0             | movups xmmword ptr ds:[r8-20],xmm0      |
-00007FF71E2A40D4 | 48:8B83 80030000         | mov rax,qword ptr ds:[rbx+380]          |
-00007FF71E2A40DB | 49:8940 F0               | mov qword ptr ds:[r8-10],rax            |
-00007FF71E2A40DF | 4C:8992 28080000         | mov qword ptr ds:[rdx+828],r10          |
-00007FF71E2A40E6 | 44:889A 30080000         | mov byte ptr ds:[rdx+830],r11b          |
-00007FF71E2A40ED | E8 8D55E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A40F2 | 833D A7357A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A40F9 | 0F85 44010000            | jne tauri-app.7FF71E2A4243              |
-00007FF71E2A40FF | 48:8B15 8A357A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A4106 | 4C:8B05 8B357A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A410D | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A4115 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A4118 | E8 99400B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A411D | 48:8D15 6C3B7000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A4124 | E9 3F010000              | jmp tauri-app.7FF71E2A4268              |
-00007FF71E2A4129 | 48:8B15 A0357A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A4130 | 4C:8B05 A1357A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A4137 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A413F | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A4142 | E8 6F400B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A4147 | 48:8D15 5A3B7000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A414E | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A4156 | E8 2C500200              | call tauri-app.7FF71E2C9187             |
-00007FF71E2A415B | E9 15010000              | jmp tauri-app.7FF71E2A4275              |
-00007FF71E2A4160 | 4C:8D05 27982B00         | lea r8,qword ptr ds:[7FF71E55D98E]      | 00007FF71E55D98E:"get_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_roblox_path_cmdget_validated_roblox_path_cmdvalidate_roblox_path_cmdroblox_exists_cmdget_roblox_exe_path_cmdget_roblox_version_cmdpick_roblox_directoryvalidate_and_update_roblox_pathget_volt_bin_versionget_volt_bin_version_infoget_file_version_cmddownload_file_from_url_cmdrestore_cached_volt_files_cmdcache_and_uninstall_volt
-00007FF71E2A4167 | 41:B9 19000000           | mov r9d,19                              |
-00007FF71E2A416D | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A4170 | 48:89FA                  | mov rdx,rdi                             |
-00007FF71E2A4173 | E8 ED04C8FF              | call <tauri-app.sub_7FF71DF24665>       |
-00007FF71E2A4178 | 84C0                     | test al,al                              |
-00007FF71E2A417A | 0F84 31010000            | je tauri-app.7FF71E2A42B1               |
-00007FF71E2A4180 | 48:8DB3 08020000         | lea rsi,qword ptr ds:[rbx+208]          |
-00007FF71E2A4187 | 48:8B93 88030000         | mov rdx,qword ptr ds:[rbx+388]          |
-00007FF71E2A418E | 4C:8B83 90030000         | mov r8,qword ptr ds:[rbx+390]           |
-00007FF71E2A4195 | 48:8B83 A8030000         | mov rax,qword ptr ds:[rbx+3A8]          |
-00007FF71E2A419C | 48:898424 40010000       | mov qword ptr ss:[rsp+140],rax          |
-00007FF71E2A41A4 | 0F1083 98030000          | movups xmm0,xmmword ptr ds:[rbx+398]    |
-00007FF71E2A41AB | 0F298424 30010000        | movaps xmmword ptr ss:[rsp+130],xmm0    |
-00007FF71E2A41B3 | 45:31C9                  | xor r9d,r9d                             |
-00007FF71E2A41B6 | 48:8D8424 D0080000       | lea rax,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A41BE | 83A0 91010000 00         | and dword ptr ds:[rax+191],0            |
-00007FF71E2A41C5 | 44:8888 95010000         | mov byte ptr ds:[rax+195],r9b           |
-00007FF71E2A41CC | B9 68010000              | mov ecx,168                             |
-00007FF71E2A41D1 | 48:89C7                  | mov rdi,rax                             |
-00007FF71E2A41D4 | F3:A4                    | rep movsb                               |
-00007FF71E2A41D6 | 48:8990 80010000         | mov qword ptr ds:[rax+180],rdx          |
-00007FF71E2A41DD | 0F1083 70030000          | movups xmm0,xmmword ptr ds:[rbx+370]    |
-00007FF71E2A41E4 | 0F1180 68010000          | movups xmmword ptr ds:[rax+168],xmm0    |
-00007FF71E2A41EB | 48:8B8B 80030000         | mov rcx,qword ptr ds:[rbx+380]          |
-00007FF71E2A41F2 | 48:8988 78010000         | mov qword ptr ds:[rax+178],rcx          |
-00007FF71E2A41F9 | 4C:8980 88010000         | mov qword ptr ds:[rax+188],r8           |
-00007FF71E2A4200 | 44:8888 90010000         | mov byte ptr ds:[rax+190],r9b           |
-00007FF71E2A4207 | E8 7354E8FF              | call tauri-app.7FF71E12967F             |
-00007FF71E2A420C | 833D 8D347A00 02         | cmp dword ptr ds:[7FF71EA476A0],2       |
-00007FF71E2A4213 | 0F85 7B010000            | jne tauri-app.7FF71E2A4394              |
-00007FF71E2A4219 | 48:8B15 70347A00         | mov rdx,qword ptr ds:[7FF71EA47690]     |
-00007FF71E2A4220 | 4C:8B05 71347A00         | mov r8,qword ptr ds:[7FF71EA47698]      |
-00007FF71E2A4227 | 48:8DBC24 206A0000       | lea rdi,qword ptr ss:[rsp+6A20]         |
-00007FF71E2A422F | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A4232 | E8 7F3F0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A4237 | 48:8D15 523A7000         | lea rdx,qword ptr ds:[7FF71E9A7C90]     | 00007FF71E9A7C90:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A423E | E9 76010000              | jmp tauri-app.7FF71E2A43B9              |
-00007FF71E2A4243 | 48:8B15 86347A00         | mov rdx,qword ptr ds:[7FF71EA476D0]     |
-00007FF71E2A424A | 4C:8B05 87347A00         | mov r8,qword ptr ds:[7FF71EA476D8]      |
-00007FF71E2A4251 | 48:8DBC24 30010000       | lea rdi,qword ptr ss:[rsp+130]          | [rsp+130]:sub_7FF71E191E83+5C
-00007FF71E2A4259 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A425C | E8 553F0B00              | call <tauri-app.sub_7FF71E3581B6>       |
-00007FF71E2A4261 | 48:8D15 403A7000         | lea rdx,qword ptr ds:[7FF71E9A7CA8]     | 00007FF71E9A7CA8:&"/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tauri-2.9.2\\src\\async_runtime.rs"
-00007FF71E2A4268 | 48:8D8C24 D0080000       | lea rcx,qword ptr ss:[rsp+8D0]          |
-00007FF71E2A4270 | E8 FD360200              | call <tauri-app.sub_7FF71E2C7972>       |
-00007FF71E2A4275 | 48:89C6                  | mov rsi,rax                             |
-00007FF71E2A4278 | 48:89F9                  | mov rcx,rdi                             |
-00007FF71E2A427B | E8 14B6F1FF              | call <tauri-app.sub_7FF71E1BF894>       |
-00007FF71E2A4280 | B9 84000000              | mov ecx,84                              |
-00007FF71E2A4285 | B8 CC000000              | mov eax,CC                              |
-00007FF71E2A428A | F048:0FB10E              | lock cmpxchg qword ptr ds:[rsi],rcx     |
-00007FF71E2A428F | 74 0A                    | je tauri-app.7FF71E2A429B               |
-00007FF71E2A4291 | 48:8B46 10               | mov rax,qword ptr ds:[rsi+10]           |
-00007FF71E2A4295 | 48:89F1                  | mov rcx,rsi                             |
-00007FF71E2A4298 | FF50 20                  | call qword ptr ds:[rax+20]              |
-00007FF71E2A429B | B0 01                    | mov al,1                                |
-00007FF71E2A429D | 48:81C4 F8990000         | add rsp,99F8                            |
-00007FF71E2A42A4 | 5B                       | pop rbx                                 |
-00007FF71E2A42A5 | 5D                       | pop rbp                                 |
-00007FF71E2A42A6 | 5F                       | pop rdi                                 |
-00007FF71E2A42A7 | 5E                       | pop rsi                                 |
-00007FF71E2A42A8 | 41:5C                    | pop r12                                 | r12:TranslateMessage
-00007FF71E2A42AA | 41:5D                    | pop r13                                 | r13:DispatchMessageW
-00007FF71E2A42AC | 41:5E                    | pop r14                                 |
-00007FF71E2A42AE | 41:5F                    | pop r15                                 | r15:GetMessageW
-00007FF71E2A42B0 | C3                       | ret                                     |
+# strings
+Address          Disassembly                         String Address   String                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+00007FF726D45954 lea r9,qword ptr ds:[7FF7277E7FCE]  00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF726D459E7 lea r9,qword ptr ds:[7FF7277E7FCE]  00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF726D47448 lea rdx,qword ptr ds:[7FF7277E7FCE] 00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF726D47D32 lea r11,qword ptr ds:[7FF7277E7FCE] 00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF726D49278 lea rdx,qword ptr ds:[7FF7277E7FCE] 00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF726D50271 lea rax,qword ptr ds:[7FF72728DD98] 00007FF72728DD98 &"Successfully synthesized import lookup table entry from lookup table: "
+00007FF726D50504 lea rax,qword ptr ds:[7FF72728DE60] 00007FF72728DE60 &"Successfully synthesized import lookup table entry from IAT: "
+00007FF726D510C8 lea rax,qword ptr ds:[7FF72728DD98] 00007FF72728DD98 &"Successfully synthesized import lookup table entry from lookup table: "
+00007FF726D5135B lea rax,qword ptr ds:[7FF72728DE60] 00007FF72728DE60 &"Successfully synthesized import lookup table entry from IAT: "
+00007FF726D55D59 lea rax,qword ptr ds:[7FF72728BF60] 00007FF72728BF60 "goblin::pe::load_configLoadConfig bytes slice created successfully, length="
+00007FF726D55DF7 lea rax,qword ptr ds:[7FF72728BFB0] 00007FF72728BFB0 &"LoadConfig bytes slice created successfully, length="
+00007FF726D55E36 lea rax,qword ptr ds:[7FF72728BF60] 00007FF72728BF60 "goblin::pe::load_configLoadConfig bytes slice created successfully, length="
+00007FF726D85F0C lea rdx,qword ptr ds:[7FF7272BB648] 00007FF7272BB648 "tunnel error: failed to create underlying connectionio error establishing tunnelmissing destination hostproxy authorization requiredproxy response headers too longunsuccessful"
+00007FF726E3AC4F lea rax,qword ptr ds:[7FF727350218] 00007FF727350218 "ConnectFailedMissingHostProxyAuthRequiredProxyHeadersTooLongTunnelUnexpectedEofTunnelUnsuccessfulalready called/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hyper-util-0.1.17\\src\\service\\oneshot.rs"
+00007FF726E3AC69 lea rdx,qword ptr ds:[7FF727350241] 00007FF727350241 "ProxyHeadersTooLongTunnelUnexpectedEofTunnelUnsuccessfulalready called/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hyper-util-0.1.17\\src\\service\\oneshot.rs"
+00007FF726E3AC7D lea rdx,qword ptr ds:[7FF727350225] 00007FF727350225 "MissingHostProxyAuthRequiredProxyHeadersTooLongTunnelUnexpectedEofTunnelUnsuccessfulalready called/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hyper-util-0.1.17\\src\\service\\oneshot.rs"
+00007FF726E3AC9A lea rdx,qword ptr ds:[7FF727350230] 00007FF727350230 "ProxyAuthRequiredProxyHeadersTooLongTunnelUnexpectedEofTunnelUnsuccessfulalready called/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hyper-util-0.1.17\\src\\service\\oneshot.rs"
+00007FF726E3ACEA lea rdx,qword ptr ds:[7FF727350254] 00007FF727350254 "TunnelUnexpectedEofTunnelUnsuccessfulalready called/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hyper-util-0.1.17\\src\\service\\oneshot.rs"
+00007FF726E3AD04 lea rdx,qword ptr ds:[7FF727350267] 00007FF727350267 "TunnelUnsuccessfulalready called/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hyper-util-0.1.17\\src\\service\\oneshot.rs"
+00007FF726EEC664 lea r9,qword ptr ds:[7FF7277E7FCE]  00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF726F65542 lea r8,qword ptr ds:[7FF7277BD2B8]  00007FF7277BD2B8 "Failed to send HTTP requestFailed to read response bodyFailed to parse ZIP archiveFailed to access file in archiveFailed to create parent directoryFailed to create output fileFailed to copy file contentsFailed to create directorySOFTWAREFailed to open SOFTWARE keyROBLOX Corporation[Installer] Successfully deleted ROBLOX Corporation registry key\n"
+00007FF726F66E16 lea rdx,qword ptr ds:[7FF7277BD383] 00007FF7277BD383 "Failed to create directorySOFTWAREFailed to open SOFTWARE keyROBLOX Corporation[Installer] Successfully deleted ROBLOX Corporation registry key\n"
+00007FF726F66E6E lea rdx,qword ptr ds:[7FF7277BD32A] 00007FF7277BD32A "Failed to create parent directoryFailed to create output fileFailed to copy file contentsFailed to create directorySOFTWAREFailed to open SOFTWARE keyROBLOX Corporation[Installer] Successfully deleted ROBLOX Corporation registry key\n"
+00007FF726F6779F lea rax,qword ptr ds:[7FF7277BCEE0] 00007FF7277BCEE0 &"[Installer] Successfully installed Roblox version: "
+00007FF726F678F0 lea rdx,qword ptr ds:[7FF7277BD367] 00007FF7277BD367 "Failed to copy file contentsFailed to create directorySOFTWAREFailed to open SOFTWARE keyROBLOX Corporation[Installer] Successfully deleted ROBLOX Corporation registry key\n"
+00007FF726F67B36 lea rdx,qword ptr ds:[7FF7277BD2EF] 00007FF7277BD2EF "Failed to parse ZIP archiveFailed to access file in archiveFailed to create parent directoryFailed to create output fileFailed to copy file contentsFailed to create directorySOFTWAREFailed to open SOFTWARE keyROBLOX Corporation[Installer] Successfully deleted ROBLOX Corporation registry key\n"
+00007FF726F67CD4 lea rdx,qword ptr ds:[7FF7277BD30A] 00007FF7277BD30A "Failed to access file in archiveFailed to create parent directoryFailed to create output fileFailed to copy file contentsFailed to create directorySOFTWAREFailed to open SOFTWARE keyROBLOX Corporation[Installer] Successfully deleted ROBLOX Corporation registry key\n"
+00007FF726F67E67 lea rax,qword ptr ds:[7FF7277BD2D3] 00007FF7277BD2D3 "Failed to read response bodyFailed to parse ZIP archiveFailed to access file in archiveFailed to create parent directoryFailed to create output fileFailed to copy file contentsFailed to create directorySOFTWAREFailed to open SOFTWARE keyROBLOX Corporation[Installer] Successfully deleted ROBLOX Corporation registry key\n"
+00007FF726F68061 lea rdx,qword ptr ds:[7FF7277BD34B] 00007FF7277BD34B "Failed to create output fileFailed to copy file contentsFailed to create directorySOFTWAREFailed to open SOFTWARE keyROBLOX Corporation[Installer] Successfully deleted ROBLOX Corporation registry key\n"
+00007FF726F6BAD7 lea rdx,qword ptr ds:[7FF7277BD39D] 00007FF7277BD39D "SOFTWAREFailed to open SOFTWARE keyROBLOX Corporation[Installer] Successfully deleted ROBLOX Corporation registry key\n"
+00007FF726F6BB01 lea rdx,qword ptr ds:[7FF7277BD3C0] 00007FF7277BD3C0 "ROBLOX Corporation[Installer] Successfully deleted ROBLOX Corporation registry key\n"
+00007FF726F6BB9A lea rax,qword ptr ds:[7FF7277BD418] 00007FF7277BD418 &"[Installer] Successfully deleted ROBLOX Corporation registry key\n"
+00007FF726F6BBE1 lea rdx,qword ptr ds:[7FF7277BD3A5] 00007FF7277BD3A5 "Failed to open SOFTWARE keyROBLOX Corporation[Installer] Successfully deleted ROBLOX Corporation registry key\n"
+00007FF726F78FFA lea rdx,qword ptr ds:[7FF7277E7FDA] 00007FF7277E7FDA "WrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshake"
+00007FF726F7906E lea rdx,qword ptr ds:[7FF7277E8034] 00007FF7277E8034 "MissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeInvalidCloseSequenceToo many headersMessage too long:  > "
+00007FF726F79103 lea rdx,qword ptr ds:[7FF7277E7FF9] 00007FF7277E7FF9 "MissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeInvalidCloseSequen"
+00007FF726F79137 lea rdx,qword ptr ds:[7FF7277E8017] 00007FF7277E8017 "MissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeInvalidCloseSequenceToo many headersMessage too "
+00007FF726F7914E lea rdx,qword ptr ds:[7FF7277E8087] 00007FF7277E8087 "JunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeInvalidCloseSequenceToo many headersMessage too long:  > "
+00007FF726F79162 lea rdx,qword ptr ds:[7FF7277E7FE9] 00007FF7277E7FE9 "WrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeIn"
+00007FF726F791BC lea rdx,qword ptr ds:[7FF7277E8054] 00007FF7277E8054 "MissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeInvalidCloseSequenceToo many headersMessage too long:  > "
+00007FF726F79213 lea rdx,qword ptr ds:[7FF7277E806A] 00007FF7277E806A "SecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeInvalidCloseSequenceToo many headersMessage too long:  > "
+00007FF726F7926A lea rdx,qword ptr ds:[7FF7277E8097] 00007FF7277E8097 "CustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeInvalidCloseSequenceToo many headersMessage too long:  > "
+00007FF726F79320 lea rax,qword ptr ds:[7FF7277E7FD2] 00007FF7277E7FD2 "max_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingH"
+00007FF726F7934F lea rax,qword ptr ds:[7FF7277E7FC0] 00007FF7277E7FC0 "MessageTooLongsizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentRe"
+00007FF726F79356 lea r9,qword ptr ds:[7FF7277E7FCE]  00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF726F9194F lea rdx,qword ptr ds:[7FF7277E7FCE] 00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF726FFB905 lea r15,qword ptr ds:[7FF7277E7FCE] 00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF72706C4E9 lea rdx,qword ptr ds:[7FF7277E7FCE] 00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF72706C92F lea rdx,qword ptr ds:[7FF7277E7FCE] 00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF72707D35A lea rdx,qword ptr ds:[7FF7277E7FCE] 00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF72707E8C0 lea rdx,qword ptr ds:[7FF7277E7FCE] 00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF72707FAAA lea rdx,qword ptr ds:[7FF7277E7FCE] 00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF7270BBE30 lea rax,qword ptr ds:[7FF7277C1938] 00007FF7277C1938 &"update endpoint did not respond with a successful status code"
+00007FF7270CE12F lea rax,qword ptr ds:[7FF7277BBE08] 00007FF7277BBE08 &"Successfully forced LIVE channel!"
+00007FF7270CE1A3 lea rcx,qword ptr ds:[7FF7277BBE48] 00007FF7277BBE48 &"Successfully installed LIVE channel version: "
+00007FF727118B21 lea r8,qword ptr ds:[7FF7277E7FCE]  00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF727119A56 lea rdx,qword ptr ds:[7FF7277E7FCE] 00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF72711A785 lea rcx,qword ptr ds:[7FF7277E7FCE] 00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF72711A8FB lea rax,qword ptr ds:[7FF7277E7FCE] 00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF72711A9EF lea rax,qword ptr ds:[7FF7277E7FCE] 00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF727192844 lea rdx,qword ptr ds:[7FF7277E8240] 00007FF7277E8240 "Unsupported HTTP method used - only GET is allowedHTTP version must be 1.1 or higherNo \"Connection: upgrade\" headerNo \"Upgrade: websocket\" headerNo \"Sec-WebSocket-Version: 13\" headerNo \"Sec-WebSocket-Key\" headerKey mismatch in \"Sec-WebSocket-Accept\" headerJunk after client requestCustom response must not be successfulMissing, duplicated or incorrect header "
+00007FF7271928C5 lea rdx,qword ptr ds:[7FF7277E82D1] 00007FF7277E82D1 "No \"Sec-WebSocket-Version: 13\" headerNo \"Sec-WebSocket-Key\" headerKey mismatch in \"Sec-WebSocket-Accept\" headerJunk after client requestCustom response must not be successfulMissing, duplicated or incorrect header "
+00007FF72719296B lea rdx,qword ptr ds:[7FF7277E8294] 00007FF7277E8294 "No \"Connection: upgrade\" headerNo \"Upgrade: websocket\" headerNo \"Sec-WebSocket-Version: 13\" headerNo \"Sec-WebSocket-Key\" headerKey mismatch in \"Sec-WebSocket-Accept\" headerJunk after client requestCustom response must not be successfulMissing, duplicated or incorrect header "
+00007FF727192999 lea rdx,qword ptr ds:[7FF7277E82B3] 00007FF7277E82B3 "No \"Upgrade: websocket\" headerNo \"Sec-WebSocket-Version: 13\" headerNo \"Sec-WebSocket-Key\" headerKey mismatch in \"Sec-WebSocket-Accept\" headerJunk after client requestCustom response must not be successfulMissing, duplicated or incorrect header "
+00007FF7271929B6 lea rdx,qword ptr ds:[7FF7277E8340] 00007FF7277E8340 "Junk after client requestCustom response must not be successfulMissing, duplicated or incorrect header "
+00007FF7271929D3 lea rdx,qword ptr ds:[7FF7277E8272] 00007FF7277E8272 "HTTP version must be 1.1 or higherNo \"Connection: upgrade\" headerNo \"Upgrade: websocket\" headerNo \"Sec-WebSocket-Version: 13\" headerNo \"Sec-WebSocket-Key\" headerKey mismatch in \"Sec-WebSocket-Accept\" headerJunk after client requestCustom response must not be successfulMissing, duplicated or incorrect header "
+00007FF727192A37 lea rdx,qword ptr ds:[7FF7277E82F6] 00007FF7277E82F6 "No \"Sec-WebSocket-Key\" headerKey mismatch in \"Sec-WebSocket-Accept\" headerJunk after client requestCustom response must not be successfulMissing, duplicated or incorrect header "
+00007FF727192A88 lea rdx,qword ptr ds:[7FF7277E8313] 00007FF7277E8313 "Key mismatch in \"Sec-WebSocket-Accept\" headerJunk after client requestCustom response must not be successfulMissing, duplicated or incorrect header "
+00007FF727192ADF lea rdx,qword ptr ds:[7FF7277E8359] 00007FF7277E8359 "Custom response must not be successfulMissing, duplicated or incorrect header "
+00007FF727192CBA lea rdx,qword ptr ds:[7FF7277E7F90] 00007FF7277E7F90 "URL contains empty host nameNo path/query in URLMessageTooLongsizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFr"
+00007FF727192D29 lea rdx,qword ptr ds:[7FF7277E7F78] 00007FF7277E7F78 "URL scheme not supportedURL contains empty host nameNo path/query in URLMessageTooLongsizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownContr"
+00007FF727192D5D lea rdx,qword ptr ds:[7FF7277E7FAC] 00007FF7277E7FAC "No path/query in URLMessageTooLongsizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFra"
+00007FF727192EFE lea rdx,qword ptr ds:[7FF7277E7FDA] 00007FF7277E7FDA "WrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshake"
+00007FF727192F72 lea rdx,qword ptr ds:[7FF7277E8034] 00007FF7277E8034 "MissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeInvalidCloseSequenceToo many headersMessage too long:  > "
+00007FF727193007 lea rdx,qword ptr ds:[7FF7277E7FF9] 00007FF7277E7FF9 "MissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeInvalidCloseSequen"
+00007FF72719303B lea rdx,qword ptr ds:[7FF7277E8017] 00007FF7277E8017 "MissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeInvalidCloseSequenceToo many headersMessage too "
+00007FF727193052 lea rdx,qword ptr ds:[7FF7277E8087] 00007FF7277E8087 "JunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeInvalidCloseSequenceToo many headersMessage too long:  > "
+00007FF727193066 lea rdx,qword ptr ds:[7FF7277E7FE9] 00007FF7277E7FE9 "WrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeIn"
+00007FF7271930C0 lea rdx,qword ptr ds:[7FF7277E8054] 00007FF7277E8054 "MissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeInvalidCloseSequenceToo many headersMessage too long:  > "
+00007FF727193117 lea rdx,qword ptr ds:[7FF7277E806A] 00007FF7277E806A "SecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeInvalidCloseSequenceToo many headersMessage too long:  > "
+00007FF72719316E lea rdx,qword ptr ds:[7FF7277E8097] 00007FF7277E8097 "CustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingHandshakeInvalidOpcodeInvalidCloseSequenceToo many headersMessage too long:  > "
+00007FF72719322F lea rcx,qword ptr ds:[7FF7277E7FD2] 00007FF7277E7FD2 "max_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClosingH"
+00007FF72719325E lea rax,qword ptr ds:[7FF7277E7FC0] 00007FF7277E7FC0 "MessageTooLongsizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentRe"
+00007FF727193265 lea r9,qword ptr ds:[7FF7277E7FCE]  00007FF7277E7FCE "sizemax_sizeWrongHttpMethodWrongHttpVersionMissingConnectionUpgradeHeaderMissingUpgradeWebSocketHeaderMissingSecWebSocketVersionHeaderMissingSecWebSocketKeySecWebSocketAcceptKeyMismatchJunkAfterRequestCustomResponseSuccessfulInvalidHeaderHandshakeIncompleteHttparseErrorSendAfterClosingReceivedAfterClosingNonZeroReservedBitsUnmaskedFrameFromClientMaskedFrameFromServerFragmentedControlFrameControlFrameTooBigUnknownControlFrameTypeUnknownDataFrameTypeUnexpectedContinueFrameExpectedFragmentResetWithoutClos"
+00007FF9B9D5789B lea rax,qword ptr ds:[7FF9BA14C4C7] 00007FF9BA14C4C7 "Success"
+00007FF9DB1DBB14 lea rdx,qword ptr ds:[7FF9DB79C8C8] 00007FF9DB79C8C8 L"ExplicitAssociationSuccessful"
+00007FF9DB1DBBAA lea rdx,qword ptr ds:[7FF9DB79C8C8] 00007FF9DB79C8C8 L"ExplicitAssociationSuccessful"
+00007FF9DB1DBC3F lea rdx,qword ptr ds:[7FF9DB79C8C8] 00007FF9DB79C8C8 L"ExplicitAssociationSuccessful"
+00007FF9DB272DFB lea rax,qword ptr ds:[7FF9DB79FB78] 00007FF9DB79FB78 L"CacheTimeoutSuccess"
+00007FF9DB2EF529 lea rax,qword ptr ds:[7FF9DB79FB78] 00007FF9DB79FB78 L"CacheTimeoutSuccess"
+00007FF9DB34A032 lea r8,qword ptr ds:[7FF9DB7AD020]  00007FF9DB7AD020 L"SetAppAsDefault Completed Successfully"
+00007FF9DB34A42F lea r8,qword ptr ds:[7FF9DB7AD020]  00007FF9DB7AD020 L"SetAppAsDefault Completed Successfully"
+00007FF9DB3AC73D lea rdx,qword ptr ds:[7FF9DB79C8C8] 00007FF9DB79C8C8 L"ExplicitAssociationSuccessful"
+00007FF9DD270EF4 lea rcx,qword ptr ds:[7FF9DD296FA0] 00007FF9DD296FA0 L"Successfully removed old provider"
+00007FF9DD2710C5 lea rcx,qword ptr ds:[7FF9DD2972A0] 00007FF9DD2972A0 L"Successfully installed new provider; adding to updated provider list"
+00007FF9DD2715F0 lea rcx,qword ptr ds:[7FF9DD297770] 00007FF9DD297770 L"Successfully installed dynamic provider; adding it to updated list"
+00007FF9DD2716C0 lea rcx,qword ptr ds:[7FF9DD2978A0] 00007FF9DD2978A0 L"Successfully updated dynamic provider"
+00007FF9DD2717F8 lea rcx,qword ptr ds:[7FF9DD297A20] 00007FF9DD297A20 L"Exiting MigrateWinsockConfiguration successfully"
+00007FF9DD272EEF lea rcx,qword ptr ds:[7FF9DD298690] 00007FF9DD298690 L"Successfully created default setup migration tree"
+00007FF9DEE8B51D lea rdx,qword ptr ds:[7FF9DEEC6AE8] 00007FF9DEEC6AE8 "WSNoteSuccessfulHostentLookup"
+00007FF9DF3FE441 lea rdx,qword ptr ds:[7FF9DF46E830] 00007FF9DF46E830 L"Successful File Date"
+00007FF9DF5305B6 lea rax,qword ptr ds:[7FF9DF7456A0] 00007FF9DF7456A0 L"CRpcResolver::GetConnection returned success, but gGotSecurityData is false"
+00007FF9DF681B41 lea rdx,qword ptr ds:[7FF9DF76BAC8] 00007FF9DF76BAC8 "A class factory has returned success, but a NULL object"
+00007FF9DF681BE1 lea rdx,qword ptr ds:[7FF9DF76BC00] 00007FF9DF76BC00 "A call to DllGetClassObject has returned success, but a NULL object"
+00007FF9DF69C8E8 lea rax,qword ptr ds:[7FF9DF773A30] 00007FF9DF773A30 L"Successfully read server entry (PackageId=%S, ServerId=%d): DisplayName=%S"
+00007FF9DF6A51CE lea rax,qword ptr ds:[7FF9DF7740A0] 00007FF9DF7740A0 L"Successfully read class entry (PackageId=%S, CLSID=%ws): DisplayName=%S"
+00007FF9DF6A54F9 lea rax,qword ptr ds:[7FF9DF774710] 00007FF9DF774710 L"Successfully read interface entry (PackageId=%S, IID=%ws)"
+00007FF9DF6A57C4 lea rax,qword ptr ds:[7FF9DF773CA0] 00007FF9DF773CA0 L"Successfully read ProgId entry (PackageId=%S, ProgId=%S)"
+00007FF9DF6A59F5 lea rax,qword ptr ds:[7FF9DF7742E0] 00007FF9DF7742E0 L"Successfully read proxy/stub entry (PackageId=%S, PSCLSID=%ws)"
+00007FF9DF6A5EE2 lea rax,qword ptr ds:[7FF9DF7738C0] 00007FF9DF7738C0 L"Successfully read TreatAs entry (PackageId=%S, CLSID=%ws): DisplayName=%S"
+00007FF9DF6A622E lea rax,qword ptr ds:[7FF9DF774940] 00007FF9DF774940 L"Successfully read typelib entry (PackageId=%S, TypeLibId=%ws, TypeLibVersion=%S)"
+00007FF9DF938B66 lea r8,qword ptr ds:[7FF9DFE383E0]  00007FF9DFE383E0 L"SetAppAsDefault Completed Successfully"
+00007FF9DF938F5D lea r8,qword ptr ds:[7FF9DFE383E0]  00007FF9DFE383E0 L"SetAppAsDefault Completed Successfully"
+00007FF9DFBB92A0 lea rdx,qword ptr ds:[7FF9DFE394B0] 00007FF9DFE394B0 L"ExplicitAssociationSuccessful"
+00007FF9E064EC45 lea rdx,qword ptr ds:[7FF9E06A8CA0] 00007FF9E06A8CA0 L"Call: InitializeProcThreadAttributeList second call failure, expected success"
+00007FF9E069087B lea rdx,qword ptr ds:[7FF9E06B51D0] 00007FF9E06B51D0 L"Call: processOptions->LaunchWatcher->WaitForSuccess()"
+00007FF9E07B5340 and al,byte ptr ds:[7FF9E07B6CD9]   00007FF9E07B6CD9 "stSuccessfullWait"
+Address          Disassembly                                   String Address   String                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+00007FF726D7941D lea rdx,qword ptr ds:[7FF7277B79DB]           00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF726DB3AB4 lea r9,qword ptr ds:[7FF7272E99A8]            00007FF7272E99A8 &"Found empty token while parsing accelerator: "
+00007FF726DB9F13 lea r9,qword ptr ds:[7FF7277B79DB]            00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF726F4304A lea rdx,qword ptr ds:[7FF72737A1CC]           00007FF72737A1CC "EmptyTokenInvalidFormat/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-0.61.3\\src\\Windows\\Win32\\UI\\Input\\Touch\\mod.rs"
+00007FF726F43068 lea rdx,qword ptr ds:[7FF72737A1BE]           00007FF72737A1BE "UnsupportedKeyEmptyTokenInvalidFormat/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-0.61.3\\src\\Windows\\Win32\\UI\\Input\\Touch\\mod.rs"
+00007FF726F430C7 lea rdx,qword ptr ds:[7FF72737A160]           00007FF72737A160 "SetupError__internal_unstable_listeners_function_id____internal_unstable_listeners_object_id__UnsupportedKeyEmptyTokenInvalidFormat/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-0.61.3\\src\\Windows\\Win32\\UI\\Input\\Touch\\mod.rs"
+00007FF726F57D82 lea r8,qword ptr ds:[7FF7277B79DB]            00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF726F57FAA lea r8,qword ptr ds:[7FF7277B79DB]            00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF726F581F0 lea r8,qword ptr ds:[7FF7277B79DB]            00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF726F58447 lea r8,qword ptr ds:[7FF7277B79DB]            00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF726F5A28B lea rcx,qword ptr ds:[7FF7277B79DB]           00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF726F5ADEF lea rcx,qword ptr ds:[7FF7277B79DB]           00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF726F5B8A2 lea rcx,qword ptr ds:[7FF7277B79DB]           00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF726F5C0BF lea rcx,qword ptr ds:[7FF7277B79DB]           00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF726F63E14 lea rax,qword ptr ds:[7FF7277C648C]           00007FF7277C648C "tauri::ipc::channel::ChannelDataIpcQueuetauri_utils::Envtauri_plugin_updater::UpdaterStatetauri::menu::Menu<tauri_runtime_wry::Wry<tauri::EventLoopMessage>>alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::map::HashMap<alloc::string::String, tokio::sync::oneshot::Sender<tauri_app_lib::state::SessionTokens>>>>alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::map::HashMap<alloc::string::String, tauri_app_lib::state::Connection>>>tauri_app_lib::state::AppStatetauri::image"
+00007FF726FA18C9 lea r8,qword ptr ds:[7FF7277B79DB]            00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF726FA1FFD lea rdx,qword ptr ds:[7FF7277B79DB]           00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF726FAE65A lea rax,qword ptr ds:[7FF7277C6528]           00007FF7277C6528 "alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::map::HashMap<alloc::string::String, tokio::sync::oneshot::Sender<tauri_app_lib::state::SessionTokens>>>>alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::map::HashMap<alloc::string::String, tauri_app_lib::state::Connection>>>tauri_app_lib::state::AppStatetauri::image::Image<'_>tauri::menu::IconMenuItem<tauri_runtime_wry::Wry<tauri::EventLoopMessage>>tauri_plugin_fs::commands::StdFileResourcetauri::path::desktop::PathRes"
+00007FF726FAF084 lea rax,qword ptr ds:[7FF72737A16A]           00007FF72737A16A "__internal_unstable_listeners_function_id____internal_unstable_listeners_object_id__UnsupportedKeyEmptyTokenInvalidFormat/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-0.61.3\\src\\Windows\\Win32\\UI\\Input\\Touch\\mod.rs"
+00007FF726FAF097 lea rax,qword ptr ds:[7FF72737A195]           00007FF72737A195 "__internal_unstable_listeners_object_id__UnsupportedKeyEmptyTokenInvalidFormat/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-0.61.3\\src\\Windows\\Win32\\UI\\Input\\Touch\\mod.rs"
+00007FF726FB0178 lea rdx,qword ptr ds:[7FF7277B79AB]           00007FF7277B79AB "webviewtimeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORC"
+00007FF726FB646E lea rax,qword ptr ds:[7FF7277C64B4]           00007FF7277C64B4 "tauri_utils::Envtauri_plugin_updater::UpdaterStatetauri::menu::Menu<tauri_runtime_wry::Wry<tauri::EventLoopMessage>>alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::map::HashMap<alloc::string::String, tokio::sync::oneshot::Sender<tauri_app_lib::state::SessionTokens>>>>alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::map::HashMap<alloc::string::String, tauri_app_lib::state::Connection>>>tauri_app_lib::state::AppStatetauri::image::Image<'_>tauri::menu::IconMenuItem<tau"
+00007FF726FCE25D lea r14,qword ptr ds:[7FF7277B79DB]           00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF726FD5BB0 lea rcx,qword ptr ds:[7FF7277B79DB]           00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF726FE0B1D lea rcx,qword ptr ds:[7FF7277C64E6]           00007FF7277C64E6 "tauri::menu::Menu<tauri_runtime_wry::Wry<tauri::EventLoopMessage>>alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::map::HashMap<alloc::string::String, tokio::sync::oneshot::Sender<tauri_app_lib::state::SessionTokens>>>>alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::map::HashMap<alloc::string::String, tauri_app_lib::state::Connection>>>tauri_app_lib::state::AppStatetauri::image::Image<'_>tauri::menu::IconMenuItem<tauri_runtime_wry::Wry<tauri::EventLoopMessage>>tauri"
+00007FF7270A76C4 lea r8,qword ptr ds:[7FF7277B9478]            00007FF7277B9478 &"session_token_request_"
+00007FF7270A78D5 lea rdx,qword ptr ds:[7FF7277B94B8]           00007FF7277B94B8 "SESSION_TOKEN_REQUESTconnectionIdsession-token-request"
+00007FF7270A79ED lea rdx,qword ptr ds:[7FF7277B94CD]           00007FF7277B94CD "connectionIdsession-token-request"
+00007FF7270A7A6E lea rdx,qword ptr ds:[7FF7277B7973]           00007FF7277B7973 "requestIdsessionTokensessionRefreshTokenappStatebasePathwebviewtimeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENI"
+00007FF7270A7B6C lea r8,qword ptr ds:[7FF7277B94D9]            00007FF7277B94D9 "session-token-request"
+00007FF7270A7DEE lea rdx,qword ptr ds:[7FF7277B9530]           00007FF7277B9530 &"Failed to emit session token request: "
+00007FF7270A8177 lea rdx,qword ptr ds:[7FF7277B8DD0]           00007FF7277B8DD0 "UI_PATH_INFOui_pathui_pidsession_tokensession_refresh_tokensettings"
+00007FF7270A81E0 lea rdx,qword ptr ds:[7FF7277B8DDC]           00007FF7277B8DDC "ui_pathui_pidsession_tokensession_refresh_tokensettings"
+00007FF7270A8264 lea rdx,qword ptr ds:[7FF7277B8DE3]           00007FF7277B8DE3 "ui_pidsession_tokensession_refresh_tokensettings"
+00007FF7270A82BA lea rdx,qword ptr ds:[7FF7277B8DE9]           00007FF7277B8DE9 "session_tokensession_refresh_tokensettings"
+00007FF7270A833B lea rdx,qword ptr ds:[7FF7277B8DF6]           00007FF7277B8DF6 "session_refresh_tokensettings"
+00007FF7270A8DB3 lea rdx,qword ptr ds:[7FF7277B79DB]           00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF7270ABF1F lea rdx,qword ptr ds:[7FF7277B79DB]           00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF7270BA9C9 lea rax,qword ptr ds:[7FF7277C64C4]           00007FF7277C64C4 "tauri_plugin_updater::UpdaterStatetauri::menu::Menu<tauri_runtime_wry::Wry<tauri::EventLoopMessage>>alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::map::HashMap<alloc::string::String, tokio::sync::oneshot::Sender<tauri_app_lib::state::SessionTokens>>>>alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::map::HashMap<alloc::string::String, tauri_app_lib::state::Connection>>>tauri_app_lib::state::AppStatetauri::image::Image<'_>tauri::menu::IconMenuItem<tauri_runtime_wry::"
+00007FF7270BAA1D lea rax,qword ptr ds:[7FF7277C64B4]           00007FF7277C64B4 "tauri_utils::Envtauri_plugin_updater::UpdaterStatetauri::menu::Menu<tauri_runtime_wry::Wry<tauri::EventLoopMessage>>alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::map::HashMap<alloc::string::String, tokio::sync::oneshot::Sender<tauri_app_lib::state::SessionTokens>>>>alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::map::HashMap<alloc::string::String, tauri_app_lib::state::Connection>>>tauri_app_lib::state::AppStatetauri::image::Image<'_>tauri::menu::IconMenuItem<tau"
+00007FF7270C0023 lea rcx,qword ptr ds:[7FF7277C641D]           00007FF7277C641D "tauri_plugin_updater::updater::Updatetauri_plugin_shell::Shell<tauri_runtime_wry::Wry<tauri::EventLoopMessage>>tauri::ipc::channel::ChannelDataIpcQueuetauri_utils::Envtauri_plugin_updater::UpdaterStatetauri::menu::Menu<tauri_runtime_wry::Wry<tauri::EventLoopMessage>>alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::map::HashMap<alloc::string::String, tokio::sync::oneshot::Sender<tauri_app_lib::state::SessionTokens>>>>alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::ma"
+00007FF7270C2351 lea r8,qword ptr ds:[7FF72737D7D8]            00007FF72737D7D8 "get_connectionsexecute_scriptrefresh_access_token_commandcomplete_token_refreshfail_token_refreshcomplete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_dire"
+00007FF7270C2450 lea r8,qword ptr ds:[7FF72737D7E7]            00007FF72737D7E7 "execute_scriptrefresh_access_token_commandcomplete_token_refreshfail_token_refreshcomplete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_f"
+00007FF7270C2586 lea r8,qword ptr ds:[7FF72737D7F5]            00007FF72737D7F5 "refresh_access_token_commandcomplete_token_refreshfail_token_refreshcomplete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explo"
+00007FF7270C26BC lea r8,qword ptr ds:[7FF72737D811]            00007FF72737D811 "complete_token_refreshfail_token_refreshcomplete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_c"
+00007FF7270C27F2 lea r8,qword ptr ds:[7FF72737D827]            00007FF72737D827 "fail_token_refreshcomplete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_c"
+00007FF7270C2928 lea r8,qword ptr ds:[7FF72737D839]            00007FF72737D839 "complete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_"
+00007FF7270C7C53 lea rax,qword ptr ds:[7FF7277B79B2]           00007FF7277B79B2 "timeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMe"
+00007FF7270C96A5 lea rax,qword ptr ds:[7FF7277B79D1]           00007FF7277B79D1 "robloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\"
+00007FF7270CA830 lea rax,qword ptr ds:[7FF7277B79D1]           00007FF7277B79D1 "robloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\"
+00007FF7270CEFC7 lea r15,qword ptr ds:[7FF7277B79E3]           00007FF7277B79E3 "buildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-interface\"
+00007FF7270CF3C4 lea r15,qword ptr ds:[7FF7277B79E3]           00007FF7277B79E3 "buildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-interface\"
+00007FF7270D4772 lea rax,qword ptr ds:[7FF7277B79C9]           00007FF7277B79C9 "fileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_"
+00007FF7270D47DE lea rax,qword ptr ds:[7FF7277B79D1]           00007FF7277B79D1 "robloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\"
+00007FF7270E05EC lea rax,qword ptr ds:[7FF7277B799B]           00007FF7277B799B "appStatebasePathwebviewtimeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERR"
+00007FF7270E2E18 lea rax,qword ptr ds:[7FF7277B799B]           00007FF7277B799B "appStatebasePathwebviewtimeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERR"
+00007FF7270E3DDC lea rax,qword ptr ds:[7FF7277B79A3]           00007FF7277B79A3 "basePathwebviewtimeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOW"
+00007FF7270E5392 lea rax,qword ptr ds:[7FF7277C6442]           00007FF7277C6442 "tauri_plugin_shell::Shell<tauri_runtime_wry::Wry<tauri::EventLoopMessage>>tauri::ipc::channel::ChannelDataIpcQueuetauri_utils::Envtauri_plugin_updater::UpdaterStatetauri::menu::Menu<tauri_runtime_wry::Wry<tauri::EventLoopMessage>>alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::map::HashMap<alloc::string::String, tokio::sync::oneshot::Sender<tauri_app_lib::state::SessionTokens>>>>alloc::sync::Arc<tokio::sync::mutex::Mutex<std::collections::hash::map::HashMap<alloc::string::String, tau"
+00007FF7270EADDF lea rax,qword ptr ds:[7FF7277B79BB]           00007FF7277B79BB "oldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_"
+00007FF7270EAE43 lea rax,qword ptr ds:[7FF7277B79C2]           00007FF7277B79C2 "newPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetim"
+00007FF7270F793D lea rax,qword ptr ds:[7FF7277B7968]           00007FF7277B7968 "destinationrequestIdsessionTokensessionRefreshTokenappStatebasePathwebviewtimeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERM"
+00007FF7270F9EDC lea rax,qword ptr ds:[7FF7277B79BB]           00007FF7277B79BB "oldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_"
+00007FF7270F9F3D lea rax,qword ptr ds:[7FF7277B79C2]           00007FF7277B79C2 "newPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetim"
+00007FF7270FF703 lea r14,qword ptr ds:[7FF72737D839]           00007FF72737D839 "complete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_client_settingsget_"
+00007FF7270FF715 lea rax,qword ptr ds:[7FF7277B7973]           00007FF7277B7973 "requestIdsessionTokensessionRefreshTokenappStatebasePathwebviewtimeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENI"
+00007FF7270FF778 lea rax,qword ptr ds:[7FF7277B797C]           00007FF7277B797C "sessionTokensessionRefreshTokenappStatebasePathwebviewtimeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOA"
+00007FF7270FF7F2 lea rax,qword ptr ds:[7FF7277B7988]           00007FF7277B7988 "sessionRefreshTokenappStatebasePathwebviewtimeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEO"
+00007FF7270FF861 lea rax,qword ptr ds:[7FF7277B799B]           00007FF7277B799B "appStatebasePathwebviewtimeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERR"
+00007FF7270FF970 lea rcx,qword ptr ds:[7FF7277BA870]           00007FF7277BA870 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF7270FFB43 lea r8,qword ptr ds:[7FF7277BA7D8]            00007FF7277BA7D8 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF7270FFBA6 lea rax,qword ptr ds:[7FF7277BA840]           00007FF7277BA840 &"complete_session_token_response: request_id=, token_len=, refresh_token_len="
+00007FF7271000AE lea r8,qword ptr ds:[7FF7277BA938]            00007FF7277BA938 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF727100141 lea r8,qword ptr ds:[7FF7277BA888]            00007FF7277BA888 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF7271001D7 lea r8,qword ptr ds:[7FF7277BA8D8]            00007FF7277BA8D8 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF727100200 lea rdx,qword ptr ds:[7FF7277BA928]           00007FF7277BA928 &"Failed to send session tokens to pending request: "
+00007FF727100E31 lea rsi,qword ptr ds:[7FF72737D827]           00007FF72737D827 "fail_token_refreshcomplete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_client_settingsupdate_c"
+00007FF727100EA7 lea rax,qword ptr ds:[7FF7277B799B]           00007FF7277B799B "appStatebasePathwebviewtimeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERR"
+00007FF727101325 lea rax,qword ptr ds:[7FF7277B9F20]           00007FF7277B9F20 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF727101349 lea rcx,qword ptr ds:[7FF7277B9F38]           00007FF7277B9F38 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF727101C58 lea rsi,qword ptr ds:[7FF72737D811]           00007FF72737D811 "complete_token_refreshfail_token_refreshcomplete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explorerensure_ignore_folderget_c"
+00007FF727101C6A lea rax,qword ptr ds:[7FF7277B79EC]           00007FF7277B79EC "tokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-interface\\src-taur"
+00007FF727101CCE lea rax,qword ptr ds:[7FF7277B799B]           00007FF7277B799B "appStatebasePathwebviewtimeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERR"
+00007FF727102149 lea rax,qword ptr ds:[7FF7277BA4B0]           00007FF7277BA4B0 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF72710216D lea rcx,qword ptr ds:[7FF7277BA4C8]           00007FF7277BA4C8 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF727102D73 lea rcx,qword ptr ds:[7FF72737D7F5]           00007FF72737D7F5 "refresh_access_token_commandcomplete_token_refreshfail_token_refreshcomplete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_folder_in_explo"
+00007FF727102D86 lea rcx,qword ptr ds:[7FF7277B799B]           00007FF7277B799B "appStatebasePathwebviewtimeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERR"
+00007FF727102E72 lea rcx,qword ptr ds:[7FF7277BA3E0]           00007FF7277BA3E0 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF727102FAD lea r8,qword ptr ds:[7FF7277BA288]            00007FF7277BA288 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF727102FC7 lea rax,qword ptr ds:[7FF7277BA2C8]           00007FF7277BA2C8 &"Starting token refresh process..."
+00007FF727103143 lea r8,qword ptr ds:[7FF7277BA2F0]            00007FF7277BA2F0 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF72710315D lea rax,qword ptr ds:[7FF7277BA340]           00007FF7277BA340 &"Emitting trigger_token_refresh event to frontend..."
+00007FF7271031C4 lea rdx,qword ptr ds:[7FF7277BA350]           00007FF7277BA350 "trigger_token_refresh"
+00007FF72710330B lea r8,qword ptr ds:[7FF7277BA368]            00007FF7277BA368 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF7271033A8 lea r9,qword ptr ds:[7FF7277BA3C8]            00007FF7277BA3C8 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF7271035A8 lea r8,qword ptr ds:[7FF7277BA420]            00007FF7277BA420 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF7271035C2 lea rax,qword ptr ds:[7FF7277BA470]           00007FF7277BA470 &"Token refresh timed out - frontend did not respond"
+00007FF72710366D lea rdx,qword ptr ds:[7FF7277BA498]           00007FF7277BA498 "Token refresh timed out"
+00007FF727103701 lea rdx,qword ptr ds:[7FF7277BA3F8]           00007FF7277BA3F8 "Token refresh failed - sender dropped"
+00007FF727103AD5 lea rax,qword ptr ds:[7FF7277BA2D8]           00007FF7277BA2D8 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF727103AFC lea rax,qword ptr ds:[7FF7277BA480]           00007FF7277BA480 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF727103B2E lea rcx,qword ptr ds:[7FF7277BA4E0]           00007FF7277BA4E0 &"apps\\desktop-interface\\src-tauri\\src\\commands\\token.rs"
+00007FF7271048C9 lea r14,qword ptr ds:[7FF72737D7E7]           00007FF72737D7E7 "execute_scriptrefresh_access_token_commandcomplete_token_refreshfail_token_refreshcomplete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_directory_cmdopen_f"
+00007FF7271048DB lea rax,qword ptr ds:[7FF7277B79DB]           00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF727104944 lea rax,qword ptr ds:[7FF7277B79DD]           00007FF7277B79DD "scriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-inte"
+00007FF7271049BA lea rax,qword ptr ds:[7FF7277B799B]           00007FF7277B799B "appStatebasePathwebviewtimeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERR"
+00007FF727105A06 lea rdx,qword ptr ds:[7FF7277B79DB]           00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF727106CFF lea rax,qword ptr ds:[7FF72737D7D8]           00007FF72737D7D8 "get_connectionsexecute_scriptrefresh_access_token_commandcomplete_token_refreshfail_token_refreshcomplete_session_token_responseread_fileread_file_base64write_filerename_filedelete_filecopy_filefile_existsopen_file_dialogsave_file_dialogopen_theme_file_dialogopen_theme_media_file_dialogsave_theme_file_dialogsave_file_to_scriptscreate_directorydirectory_existsdelete_directoryrename_directorylist_files_in_directorylist_directory_entriesget_scripts_directory_cmdget_autoexec_directory_cmdget_workspace_dire"
+00007FF727106D11 lea rax,qword ptr ds:[7FF7277B799B]           00007FF7277B799B "appStatebasePathwebviewtimeoutMsoldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERR"
+00007FF72710713F lea rdx,qword ptr ds:[7FF7277B79DB]           00007FF7277B79DB "idscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetimestamp_msapps\\desktop-in"
+00007FF7271162E0 lea rax,qword ptr ds:[7FF7277B79BB]           00007FF7277B79BB "oldPathnewPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_"
+00007FF727116851 lea rax,qword ptr ds:[7FF7277B79C2]           00007FF7277B79C2 "newPathfileNamerobloxPathidscriptbuildInfotokencontentredirectOutputdisableInternalUienableBitLibraryenableRaknetLibraryenableAntiAfksecurityPurchasePromptHookhwidSeedunlockWindowSizestreamProofGraphicsenableMultiInstanceinstanceIdentificationsilentErrorscacheVoltFilesOnClosechanneldefaultFileNamefilenameIO_ERRORJSON_ERRORNETWORK_ERRORREGISTRY_ERRORPATH_ERRORWEBSOCKET_ERRORAUTH_ERRORPROCESS_ERRORFILE_NOT_FOUNDPERMISSION_DENIEDDOWNLOAD_ERRORTIMEOUTVERSION_PARSE_ERRORUNKNOWN_ERRORClientMessagemsg_typetim"
+00007FF72716CC3B lea rdx,qword ptr ds:[7FF7277DE048]           00007FF7277DE048 "BaseUrlRequiredBaseUrlWithInitTokenizerParserRegExp; "
+00007FF72716CC9D lea rax,qword ptr ds:[7FF7277DE066]           00007FF7277DE066 "TokenizerParserRegExp; "
+00007FF72716CCE3 lea rdx,qword ptr ds:[7FF7277DE057]           00007FF7277DE057 "BaseUrlWithInitTokenizerParserRegExp; "
+00007FF7271A3607 lea r8,qword ptr ds:[7FF727802851]            00007FF727802851 "Wrong number of tokens in status lineunable to parse status as u16 ("
+00007FF7271A362D lea r8,qword ptr ds:[7FF727802834]            00007FF727802834 "HTTP version was wrong lengthWrong number of tokens in status lineunable to parse status as u16 ("
+00007FF7271A40BF lea r8,qword ptr ds:[7FF727802818]            00007FF727802818 "Status code was wrong lengthHTTP version was wrong lengthWrong number of tokens in status lineunable to parse status as u16 ("
+00007FF7271AF619 lea rdx,qword ptr ds:[7FF7278055F6]           00007FF7278055F6 "ExpectedTokenDuplicateNameOpenCloseRegexpNameCharEscapedCharOtherModifierAsteriskEndInvalidChar/build\\source\\repos\\volt\\volt-monorepo\\apps\\desktop-interface\\.cargo-home\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\url-2.5.7\\src\\lib.rs"
+00007FF9B9ACABEC lea rcx,qword ptr ds:[7FF9BA157AB2]           00007FF9BA157AB2 "widget_token"
+00007FF9B9ACCA76 lea rcx,qword ptr ds:[7FF9BA157AB2]           00007FF9BA157AB2 "widget_token"
+00007FF9B9ACCE13 lea rax,qword ptr ds:[7FF9BA157AB2]           00007FF9BA157AB2 "widget_token"
+00007FF9B9ACCE60 lea rax,qword ptr ds:[7FF9BA157AB2]           00007FF9BA157AB2 "widget_token"
+00007FF9B9ACD4BE lea rcx,qword ptr ds:[7FF9BA157AB2]           00007FF9BA157AB2 "widget_token"
+00007FF9B9ACF75D lea rax,qword ptr ds:[7FF9BA157AB2]           00007FF9BA157AB2 "widget_token"
+00007FF9B9ACFA1D lea rcx,qword ptr ds:[7FF9BA157AB2]           00007FF9BA157AB2 "widget_token"
+00007FF9B9ACFB56 lea rcx,qword ptr ds:[7FF9BA157AB2]           00007FF9BA157AB2 "widget_token"
+00007FF9B9ACFC9B lea rcx,qword ptr ds:[7FF9BA157AB2]           00007FF9BA157AB2 "widget_token"
+00007FF9B9B4B303 lea rdx,qword ptr ds:[7FF9BA15D7B0]           00007FF9BA15D7B0 "WebView2_GetAccessToken_Failed"
+00007FF9B9B4B350 lea rdx,qword ptr ds:[7FF9BA15D81F]           00007FF9BA15D81F "WebView2_GetShellToken_Failed"
+00007FF9B9B4E0A4 lea rdx,qword ptr ds:[7FF9BA15DB32]           00007FF9BA15DB32 "WebView2_LaunchWithToken_Attempt"
+00007FF9B9B4F3EF lea rdx,qword ptr ds:[7FF9BA15DB53]           00007FF9BA15DB53 "WebView2_LaunchWithToken_Failed"
+00007FF9B9B4F449 lea rdx,qword ptr ds:[7FF9BA15DBC2]           00007FF9BA15DBC2 "WebView2_CreatePersonalContextToken_Failed"
+00007FF9B9B4F50D lea rdx,qword ptr ds:[7FF9BA15DAF5]           00007FF9BA15DAF5 "WebView2_CreatePersonalContextShellToken_Failed"
+00007FF9B9E75F26 lea rax,qword ptr ds:[7FF9BA15F039]           00007FF9BA15F039 "x-ms-RefreshTokenCredential"
+00007FF9B9F81628 lea rdx,qword ptr ds:[7FF9BA1648E4]           00007FF9BA1648E4 "SrpSetTokenEnterpriseId failed: "
+00007FF9B9F81677 lea rcx,qword ptr ds:[7FF9BA1648A8]           00007FF9BA1648A8 "SrpSetTokenEnterpriseId"
+00007FF9B9FD6E0A lea rcx,qword ptr ds:[7FF9BA182930]           00007FF9BA182930 &"U_UNEXPECTED_TOKEN"
+00007FF9B9FFDA95 lea rax,qword ptr ds:[7FF9BA1E1FD1]           00007FF9BA1E1FD1 "trustTokenParams"
+00007FF9C5C88D14 lea r8,qword ptr ds:[7FF9C5C923D0]            00007FF9C5C923D0 "onecoreuap\\shell\\dataexchange\\common\\lib\\winrtexclusiontoken.cpp"
+00007FF9D6B623C0 lea r8,qword ptr ds:[7FF9D6C61B20]            00007FF9D6C61B20 "onecore\\internal\\sdk\\inc\\wil\\opensource/wil/token_helpers.h"
+00007FF9D6B623E4 lea r8,qword ptr ds:[7FF9D6C61B20]            00007FF9D6C61B20 "onecore\\internal\\sdk\\inc\\wil\\opensource/wil/token_helpers.h"
+00007FF9D6B6240F lea r8,qword ptr ds:[7FF9D6C61B20]            00007FF9D6C61B20 "onecore\\internal\\sdk\\inc\\wil\\opensource/wil/token_helpers.h"
+00007FF9D6DBB722 lea r8,qword ptr ds:[7FF9D6E4F970]            00007FF9D6E4F970 "Input host app id obtained from process token"
+00007FF9D6DBB7CE lea r8,qword ptr ds:[7FF9D6E4F9A0]            00007FF9D6E4F9A0 "Input host process does not contain app id in process token"
+00007FF9D9585C72 lea rax,qword ptr ds:[7FF9D9671A28]           00007FF9D9671A28 L"error enumerating tokens"
+00007FF9D9739530 lea r8,qword ptr ds:[7FF9D9837110]            00007FF9D9837110 "onecoreuap\\windows\\dwm\\dcomp\\dll\\kerneltokenfactory.cpp"
+00007FF9D973ACFD lea r8,qword ptr ds:[7FF9D9837110]            00007FF9D9837110 "onecoreuap\\windows\\dwm\\dcomp\\dll\\kerneltokenfactory.cpp"
+00007FF9DB331D45 lea r8,qword ptr ds:[7FF9DB7A6EB0]            00007FF9DB7A6EB0 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DB332610 lea r8,qword ptr ds:[7FF9DB7A6EB0]            00007FF9DB7A6EB0 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DB386391 lea r8,qword ptr ds:[7FF9DB7A6EB0]            00007FF9DB7A6EB0 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DB394593 lea r8,qword ptr ds:[7FF9DB7A6EB0]            00007FF9DB7A6EB0 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DB3C0A8B lea r8,qword ptr ds:[7FF9DB7A6EB0]            00007FF9DB7A6EB0 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DB3E01D7 lea r8,qword ptr ds:[7FF9DB7A6EB0]            00007FF9DB7A6EB0 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DB3E01FB lea r8,qword ptr ds:[7FF9DB7A6EB0]            00007FF9DB7A6EB0 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DB3E022B lea r8,qword ptr ds:[7FF9DB7A6EB0]            00007FF9DB7A6EB0 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DB3E0EB5 lea r8,qword ptr ds:[7FF9DB7A6EB0]            00007FF9DB7A6EB0 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DB3E0ED9 lea r8,qword ptr ds:[7FF9DB7A6EB0]            00007FF9DB7A6EB0 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DB3E0F19 lea r8,qword ptr ds:[7FF9DB7A6EB0]            00007FF9DB7A6EB0 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DB41827F lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB4182CE lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB41834A lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB418389 lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB4183C5 lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB41848E lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB4184C2 lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB41850F lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB418542 lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB418E82 lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB418F97 lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB41906C lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB4313FF lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB431447 lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB43147B lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB431496 lea r8,qword ptr ds:[7FF9DB7CDF60]            00007FF9DB7CDF60 "onecoreuap\\internal\\sdk\\inc\\UserModelTokenHelpers.h"
+00007FF9DB47C259 lea rcx,qword ptr ds:[7FF9DB7D3DB8]           00007FF9DB7D3DB8 L"RedeemTokenForFileAsync"
+00007FF9DB4D06C7 lea r8,qword ptr ds:[7FF9DB7A6EB0]            00007FF9DB7A6EB0 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DB4D0711 lea r8,qword ptr ds:[7FF9DB7A6EB0]            00007FF9DB7A6EB0 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DB4D0750 lea r8,qword ptr ds:[7FF9DB7A6EB0]            00007FF9DB7A6EB0 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DB6D4FD0 lea r8,qword ptr ds:[7FF9DB7A6EB0]            00007FF9DB7A6EB0 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DB84E0FB rol byte ptr ds:[7FF9DEE4E572],50             00007FF9DEE4E572 L"oundation.Collections.IKeyValuePair`2<Windows.Foundation.EventRegistrationToken, Int32>"
+00007FF9DB84E16D rol byte ptr ds:[7FF9DEE4E5E4],50             00007FF9DEE4E5E4 L"EventRegistrationToken, Int32>"
+00007FF9DB84E297 rol byte ptr ds:[7FF9DEE4E70E],30             00007FF9DEE4E70E L"entRegistrationToken, Int32>>"
+00007FF9DB84E2FF rol byte ptr ds:[7FF9DEE4E776],50             00007FF9DEE4E776 L"Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<Windows.Foundation.EventRegistrationToken, Int32>>"
+00007FF9DDE08541 lea rdx,qword ptr ds:[7FF9DDE22800]           00007FF9DDE22800 L"TokenSize"
+00007FF9DDE12582 lea r9,qword ptr ds:[7FF9DDE22800]            00007FF9DDE22800 L"TokenSize"
+00007FF9DDE1AECD lea rdx,qword ptr ds:[7FF9DDE22800]           00007FF9DDE22800 L"TokenSize"
+00007FF9DE3680F3 lea rax,qword ptr ds:[7FF9DE525B38]           00007FF9DE525B38 "GetUserSidFromToken %ws"
+00007FF9DE3740E8 lea r8,qword ptr ds:[7FF9DE527688]            00007FF9DE527688 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DE37410C lea r8,qword ptr ds:[7FF9DE527688]            00007FF9DE527688 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DE374137 lea r8,qword ptr ds:[7FF9DE527688]            00007FF9DE527688 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DE46FEA9 imul esi,dword ptr ds:[7FF9DEC6F891],508DA000 00007FF9DEC6F891 "LogTokenInfo"
+00007FF9DE46FF19 imul esi,dword ptr ds:[7FF9DEC6F901],508D0800 00007FF9DEC6F901 "Token"
+00007FF9DE470099 imul esi,dword ptr ds:[7FF9DEC6FA81],508B3000 00007FF9DEC6FA81 "gTokenInfo"
+00007FF9DE4700C9 imul esi,dword ptr ds:[7FF9DEC6FAB1],508AF800 00007FF9DEC6FAB1 "TokenInfo"
+00007FF9DE470139 imul esi,dword ptr ds:[7FF9DEC6FB21],508A6800 00007FF9DEC6FB21 "gTokenInfo"
+00007FF9DE4702B9 imul esi,dword ptr ds:[7FF9DEC6FCA1],50887800 00007FF9DEC6FCA1 "Token"
+00007FF9DE470369 imul esi,dword ptr ds:[7FF9DEC6FD51],5087A000 00007FF9DEC6FD51 "LogTokenInfo"
+00007FF9DE4703A9 imul esi,dword ptr ds:[7FF9DEC6FD91],50875800 00007FF9DEC6FD91 "TokenInfo"
+00007FF9DE4703D9 imul esi,dword ptr ds:[7FF9DEC6FDC1],50872800 00007FF9DEC6FDC1 "gTokenInfo"
+00007FF9DE470409 imul esi,dword ptr ds:[7FF9DEC6FDF1],5086F800 00007FF9DEC6FDF1 "gTokenInfo"
+00007FF9DEBC93B2 lea r8,qword ptr ds:[7FF9DEC750B8]            00007FF9DEC750B8 "IsTokenAppContainer"
+00007FF9DEBC93C3 lea rdx,qword ptr ds:[7FF9DEC75060]           00007FF9DEC75060 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DEBC942A lea r8,qword ptr ds:[7FF9DEC750B8]            00007FF9DEC750B8 "IsTokenAppContainer"
+00007FF9DEBC943B lea rdx,qword ptr ds:[7FF9DEC75060]           00007FF9DEC75060 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DEBCEC08 lea r8,qword ptr ds:[7FF9DEC74CF0]            00007FF9DEC74CF0 "IsElevatedToken"
+00007FF9DEBCEC87 lea r8,qword ptr ds:[7FF9DEC74D20]            00007FF9DEC74D20 "GetTokenElevationType"
+00007FF9DEC53BB0 lea r15,qword ptr ds:[7FF9DEC74B90]           00007FF9DEC74B90 "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/TOKEN_SECURITY_ATTRIBUTE_TYPE_INVALID"
+00007FF9DEC550E2 lea r8,qword ptr ds:[7FF9DEC74D38]            00007FF9DEC74D38 "IsUIAccessToken"
+00007FF9DEC55226 lea rax,qword ptr ds:[7FF9DEC74CA0]           00007FF9DEC74CA0 "TOKEN_SECURITY_ATTRIBUTE_TYPE_OCTET_STRING"
+00007FF9DEC55247 lea rax,qword ptr ds:[7FF9DEC74C48]           00007FF9DEC74C48 "TOKEN_SECURITY_ATTRIBUTE_TYPE_FQBN"
+00007FF9DEC55330 lea rax,qword ptr ds:[7FF9DEC74C20]           00007FF9DEC74C20 "TOKEN_SECURITY_ATTRIBUTE_TYPE_STRING"
+00007FF9DEC553C1 lea rax,qword ptr ds:[7FF9DEC74BF8]           00007FF9DEC74BF8 "TOKEN_SECURITY_ATTRIBUTE_TYPE_UINT64"
+00007FF9DEC55450 lea rax,qword ptr ds:[7FF9DEC74C70]           00007FF9DEC74C70 "TOKEN_SECURITY_ATTRIBUTE_TYPE_INT64"
+00007FF9DEC554DC lea rax,qword ptr ds:[7FF9DEC74BD0]           00007FF9DEC74BD0 "TOKEN_SECURITY_ATTRIBUTE_TYPE_INVALID"
+00007FF9DEE2F2E4 lea rcx,qword ptr ds:[7FF9DEE4E870]           00007FF9DEE4E870 L"Windows.Foundation.Collections.IMap`2<Windows.Foundation.EventRegistrationToken, Int32>"
+00007FF9DEE2F314 lea rcx,qword ptr ds:[7FF9DEE4E920]           00007FF9DEE4E920 L"Windows.Foundation.Collections.IMapView`2<Windows.Foundation.EventRegistrationToken, Int32>"
+00007FF9DEE2F344 lea rcx,qword ptr ds:[7FF9DEE4E560]           00007FF9DEE4E560 L"Windows.Foundation.Collections.IKeyValuePair`2<Windows.Foundation.EventRegistrationToken, Int32>"
+00007FF9DEE2F3A4 lea rcx,qword ptr ds:[7FF9DEE4E750]           00007FF9DEE4E750 L"Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<Windows.Foundation.EventRegistrationToken, Int32>>"
+00007FF9DEE2F3D4 lea rcx,qword ptr ds:[7FF9DEE4E630]           00007FF9DEE4E630 L"Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<Windows.Foundation.EventRegistrationToken, Int32>>"
+00007FF9DF389D24 lea rdx,qword ptr ds:[7FF9DF3AED70]           00007FF9DF3AED70 "CheckTokenMembership"
+00007FF9DF43F15C lea rdx,qword ptr ds:[7FF9DF47CA88]           00007FF9DF47CA88 L"@TOKEN."
+00007FF9DF43FED3 lea rdx,qword ptr ds:[7FF9DF47CA88]           00007FF9DF47CA88 L"@TOKEN."
+00007FF9DF442AE6 lea rdx,qword ptr ds:[7FF9DF47CA88]           00007FF9DF47CA88 L"@TOKEN."
+00007FF9DF59EFF0 lea rax,qword ptr ds:[7FF9DF744AE0]           00007FF9DF744AE0 L"Windows.Foundation.Handles.Internal.TokenHandle"
+00007FF9DF5E8310 lea r8,qword ptr ds:[7FF9DF778A88]            00007FF9DF778A88 "IsTokenChildAppContainer"
+00007FF9DF5E831C lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF5E8369 lea r8,qword ptr ds:[7FF9DF778A70]            00007FF9DF778A70 "GetPackageSidFromToken"
+00007FF9DF5E837F lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF5E83B8 lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF5E83F7 lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF5E8410 lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF5E8483 lea r8,qword ptr ds:[7FF9DF778B68]            00007FF9DF778B68 "GetPackageNameFromToken"
+00007FF9DF5E8498 lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF5E84D9 lea r8,qword ptr ds:[7FF9DF778B68]            00007FF9DF778B68 "GetPackageNameFromToken"
+00007FF9DF5E84E4 lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF5E859C lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF5E85BF lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF5F1195 lea r8,qword ptr ds:[7FF9DF778B48]            00007FF9DF778B48 "ProcessToken::GetSelfSid"
+00007FF9DF5F11A1 lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF5F7E4F lea rax,qword ptr ds:[7FF9DF775C30]           00007FF9DF775C30 L"APPIDREGFLAGS_IUSERVER_UNMODIFIED_CLIENT_LOGON_TOKENUSER server must be APPIDREGFLAGS_IUSERVER_UNMODIFIED_LOGON_TOKEN CLSID:%ws APPID:%ws Value:%ws %!HRESULT!"
+00007FF9DF5F7EF9 lea rax,qword ptr ds:[7FF9DF775D70]           00007FF9DF775D70 L"APPIDREGFLAGS_IUSERVER_UNMODIFIED_SESSION_LOGON_TOKENUSER server must be APPIDREGFLAGS_IUSERVER_UNMODIFIED_LOGON_TOKEN CLSID:%ws APPID:%ws Value:%ws %!HRESULT!"
+00007FF9DF5F7FA3 lea rax,qword ptr ds:[7FF9DF775EB0]           00007FF9DF775EB0 L"APPIDREGFLAGS_IUSERVER_UNMODIFIED_SESSION_LOGON_TOKENUSER and APPIDREGFLAGS_IUSERVER_UNMODIFIED_CLIENT_LOGON_TOKENUSER are mutually exclusive CLSID:%ws APPID:%ws Value:%ws %!HRESULT!"
+00007FF9DF603885 lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF6038A4 lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF6038E3 lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF6038FC lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF6187FA lea r8,qword ptr ds:[7FF9DF749448]            00007FF9DF749448 "IsTokenAppContainer"
+00007FF9DF61880C lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF61EC09 lea r8,qword ptr ds:[7FF9DF745080]            00007FF9DF745080 "CChannelHandle::RestoreToken"
+00007FF9DF61EC13 lea rax,qword ptr ds:[7FF9DF745010]           00007FF9DF745010 L"SetThreadToken failed: %!WINERROR!"
+00007FF9DF61EFAE lea r8,qword ptr ds:[7FF9DF745080]            00007FF9DF745080 "CChannelHandle::RestoreToken"
+00007FF9DF61EFBA lea rax,qword ptr ds:[7FF9DF745010]           00007FF9DF745010 L"SetThreadToken failed: %!WINERROR!"
+00007FF9DF61F59D lea rax,qword ptr ds:[7FF9DF75F7E0]           00007FF9DF75F7E0 L"OpenThreadToken failed: %!WINERROR!"
+00007FF9DF61F5BD lea r8,qword ptr ds:[7FF9DF760C08]            00007FF9DF760C08 "CChannelHandle::AdjustToken"
+00007FF9DF61F7E9 lea r8,qword ptr ds:[7FF9DF763A18]            00007FF9DF763A18 "OpenThreadTokenAtLevel"
+00007FF9DF6313A5 lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF6313D5 lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF6313FB lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF631477 lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF631490 lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF6314AF lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF6314D2 lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF634718 lea r8,qword ptr ds:[7FF9DF777D38]            00007FF9DF777D38 "IsElevatedToken"
+00007FF9DF634797 lea r8,qword ptr ds:[7FF9DF777B10]            00007FF9DF777B10 "GetTokenElevationType"
+00007FF9DF634854 lea r8,qword ptr ds:[7FF9DF777B28]            00007FF9DF777B28 "IsUIAccessToken"
+00007FF9DF636CAA lea rax,qword ptr ds:[7FF9DF75F710]           00007FF9DF75F710 L"OpenProcessToken failed: %!WINERROR!"
+00007FF9DF636D55 lea rax,qword ptr ds:[7FF9DF75F780]           00007FF9DF75F780 L"Process does not have access to its own token"
+00007FF9DF636DA8 lea rax,qword ptr ds:[7FF9DF75F7E0]           00007FF9DF75F7E0 L"OpenThreadToken failed: %!WINERROR!"
+00007FF9DF636E52 lea rax,qword ptr ds:[7FF9DF75F710]           00007FF9DF75F710 L"OpenProcessToken failed: %!WINERROR!"
+00007FF9DF638DFB lea r8,qword ptr ds:[7FF9DF749448]            00007FF9DF749448 "IsTokenAppContainer"
+00007FF9DF638E0C lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF638E7C lea r8,qword ptr ds:[7FF9DF749448]            00007FF9DF749448 "IsTokenAppContainer"
+00007FF9DF638E8D lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF639AF5 lea rax,qword ptr ds:[7FF9DF778B80]           00007FF9DF778B80 L"ZwQuerySecurityAttributesToken failed: %!STATUS!"
+00007FF9DF639B05 lea r8,qword ptr ds:[7FF9DF778BE8]            00007FF9DF778BE8 "GetTokenSecurityAttributeInformation"
+00007FF9DF639B16 lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF63AA9C lea r8,qword ptr ds:[7FF9DF749460]            00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF63AB53 lea r8,qword ptr ds:[7FF9DF778A48]            00007FF9DF778A48 "DoesTokenHaveApplicationIdAttribute"
+00007FF9DF63AB64 lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF66C2A0 lea r8,qword ptr ds:[7FF9DF767FF8]            00007FF9DF767FF8 "GetCurrentToken"
+00007FF9DF674914 lea rcx,qword ptr ds:[7FF9DF744AE0]           00007FF9DF744AE0 L"Windows.Foundation.Handles.Internal.TokenHandle"
+00007FF9DF6C7C12 lea rax,qword ptr ds:[7FF9DF777CD8]           00007FF9DF777CD8 "TOKEN_SECURITY_ATTRIBUTE_TYPE_OCTET_STRING"
+00007FF9DF6C7C33 lea rax,qword ptr ds:[7FF9DF777AC0]           00007FF9DF777AC0 "TOKEN_SECURITY_ATTRIBUTE_TYPE_FQBN"
+00007FF9DF6C7D1C lea rax,qword ptr ds:[7FF9DF777A98]           00007FF9DF777A98 "TOKEN_SECURITY_ATTRIBUTE_TYPE_STRING"
+00007FF9DF6C7DAD lea rax,qword ptr ds:[7FF9DF777A70]           00007FF9DF777A70 "TOKEN_SECURITY_ATTRIBUTE_TYPE_UINT64"
+00007FF9DF6C7E3C lea rax,qword ptr ds:[7FF9DF777AE8]           00007FF9DF777AE8 "TOKEN_SECURITY_ATTRIBUTE_TYPE_INT64"
+00007FF9DF6C7EC8 lea rax,qword ptr ds:[7FF9DF777A48]           00007FF9DF777A48 "TOKEN_SECURITY_ATTRIBUTE_TYPE_INVALID"
+00007FF9DF6D477A lea rax,qword ptr ds:[7FF9DF75F710]           00007FF9DF75F710 L"OpenProcessToken failed: %!WINERROR!"
+00007FF9DF6D478A lea r8,qword ptr ds:[7FF9DF778B08]            00007FF9DF778B08 "ProcessToken::GetProcessToken"
+00007FF9DF6D479B lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF6D4825 lea rax,qword ptr ds:[7FF9DF75F780]           00007FF9DF75F780 L"Process does not have access to its own token"
+00007FF9DF6D4837 lea r8,qword ptr ds:[7FF9DF778B08]            00007FF9DF778B08 "ProcessToken::GetProcessToken"
+00007FF9DF6D483E lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF6D4878 lea rax,qword ptr ds:[7FF9DF75F7E0]           00007FF9DF75F7E0 L"OpenThreadToken failed: %!WINERROR!"
+00007FF9DF6D4888 lea r8,qword ptr ds:[7FF9DF778B08]            00007FF9DF778B08 "ProcessToken::GetProcessToken"
+00007FF9DF6D4899 lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF6D48FD lea rax,qword ptr ds:[7FF9DF745010]           00007FF9DF745010 L"SetThreadToken failed: %!WINERROR!"
+00007FF9DF6D490D lea r8,qword ptr ds:[7FF9DF778B08]            00007FF9DF778B08 "ProcessToken::GetProcessToken"
+00007FF9DF6D491E lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF6D49A4 lea rax,qword ptr ds:[7FF9DF75F710]           00007FF9DF75F710 L"OpenProcessToken failed: %!WINERROR!"
+00007FF9DF6D49B4 lea r8,qword ptr ds:[7FF9DF778B08]            00007FF9DF778B08 "ProcessToken::GetProcessToken"
+00007FF9DF6D49C5 lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF6D4A27 lea rax,qword ptr ds:[7FF9DF745010]           00007FF9DF745010 L"SetThreadToken failed: %!WINERROR!"
+00007FF9DF6D4A37 lea r8,qword ptr ds:[7FF9DF778B08]            00007FF9DF778B08 "ProcessToken::GetProcessToken"
+00007FF9DF6D4A48 lea rdx,qword ptr ds:[7FF9DF749460]           00007FF9DF749460 "onecore\\com\\combase\\common\\internal\\processtoken.cxx"
+00007FF9DF9C6AAB lea r8,qword ptr ds:[7FF9DFE60CB8]            00007FF9DFE60CB8 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DF9C6AC7 lea r8,qword ptr ds:[7FF9DFE60CB8]            00007FF9DFE60CB8 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DF9C6B07 lea r8,qword ptr ds:[7FF9DFE60CB8]            00007FF9DFE60CB8 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DFC87B36 lea r8,qword ptr ds:[7FF9DFE60CB8]            00007FF9DFE60CB8 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9DFD88412 lea r8,qword ptr ds:[7FF9DFE60CB8]            00007FF9DFE60CB8 "onecore\\internal\\sdk\\inc\\wil\\opensource\\wil\\token_helpers.h"
+00007FF9E0640E61 lea rdx,qword ptr ds:[7FF9E06A7370]           00007FF9E06A7370 L"@TOKEN."
+00007FF9E065F50F lea rdx,qword ptr ds:[7FF9E06A7370]           00007FF9E06A7370 L"@TOKEN."
+00007FF9E0661A54 lea rdx,qword ptr ds:[7FF9E06A7370]           00007FF9E06A7370 L"@TOKEN."
+00007FF9E068FD60 lea rdx,qword ptr ds:[7FF9E06B4EA0]           00007FF9E06B4EA0 L"Call: RestrictTokenIfElevated()"
+00007FF9E068FDDE lea rdx,qword ptr ds:[7FF9E06B4F50]           00007FF9E06B4F50 L"Call: CreateAppContainerToken()"
+00007FF9E0692798 lea rdx,qword ptr ds:[7FF9E06B4D98]           00007FF9E06B4D98 L"Call: OpenThreadToken()"
+00007FF9E06927E4 lea rdx,qword ptr ds:[7FF9E06B4DC8]           00007FF9E06B4DC8 L"Call: OpenProcessToken()"
+00007FF9E0692851 lea rdx,qword ptr ds:[7FF9E06B4E00]           00007FF9E06B4E00 L"Call: GetTokenInformation() (TokenElevation)"
+00007FF9E06928B7 lea rdx,qword ptr ds:[7FF9E06B4E60]           00007FF9E06B4E60 L"Call: CreateRestrictedToken()"
+Address          Disassembly                         String Address   String                         
+00007FF9DEA3EB15 lea rdx,qword ptr ds:[7FF9DEA98DE0] 00007FF9DEA98DE0 L"RequireAuthenticatedMessages"
+# embeddedbrowserwebciew.dll symbols 
+Address          Type   O Symbol                                                      Symbol (undecorated)                                                                                                                                         
+00007FF9B9AACF50 Export 6 CreateWebViewEnvironmentWithOptionsInternal                 
+00007FF9B9B51CA0 Export 7 DllCanUnloadNow                                             
+00007FF9B9CCB330 Export 8 GetHandleVerifier                                           
+00007FF9B9D811B0 Export 0 OptionalHeader.AddressOfEntryPoint                          
+00007FF9B9E85F30 Export 4 ??4IDataFieldVisitor@telemetry_client@@QEAAAEAV01@AEBV01@@Z public: class telemetry_client::IDataFieldVisitor & __cdecl telemetry_client::IDataFieldVisitor::operator=(class telemetry_client::IDataFieldVisitor const &)
+00007FF9B9E86080 Export 3 ??1IDataFieldVisitor@telemetry_client@@UEAA@XZ              public: virtual __cdecl telemetry_client::IDataFieldVisitor::~IDataFieldVisitor(void)
+00007FF9B9F5F540 Export 1 ??0IDataFieldVisitor@telemetry_client@@QEAA@AEBV01@@Z       public: __cdecl telemetry_client::IDataFieldVisitor::IDataFieldVisitor(class telemetry_client::IDataFieldVisitor const &)
+00007FF9B9F5F540 Export 2 ??0IDataFieldVisitor@telemetry_client@@QEAA@XZ              public: __cdecl telemetry_client::IDataFieldVisitor::IDataFieldVisitor(void)
+00007FF9BA122390 Export 5 ??_7IDataFieldVisitor@telemetry_client@@6B@                 const telemetry_client::IDataFieldVisitor::`vftable'
+00007FF9BA240CD8 Import   ntdll.AcquireSRWLockExclusive                               
+00007FF9BA240CE0 Import   kernel32.AssignProcessToJobObject                           
+00007FF9BA240CE8 Import   kernel32.CancelIo                                           
+00007FF9BA240CF0 Import   kernel32.CloseHandle                                        
+00007FF9BA240CF8 Import   kernel32.CompareStringW                                     
+00007FF9BA240D00 Import   kernel32.ConnectNamedPipe                                   
+00007FF9BA240D08 Import   kernel32.CreateDirectoryW                                   
+00007FF9BA240D10 Import   kernel32.CreateEventW                                       
+00007FF9BA240D18 Import   kernel32.CreateFileA                                        
+00007FF9BA240D20 Import   kernel32.CreateFileMappingW                                 
+00007FF9BA240D28 Import   kernel32.CreateFileW                                        
+00007FF9BA240D30 Import   kernel32.CreateIoCompletionPort                             
+00007FF9BA240D38 Import   kernel32.CreateNamedPipeW                                   
+00007FF9BA240D40 Import   kernel32.CreateProcessW                                     
+00007FF9BA240D48 Import   kernel32.CreateThread                                       
+00007FF9BA240D50 Import   kernel32.CreateToolhelp32Snapshot                           
+00007FF9BA240D58 Import   ntdll.DecodePointer                                         
+00007FF9BA240D60 Import   ntdll.DeleteCriticalSection                                 
+00007FF9BA240D68 Import   kernel32.DeleteFileW                                        
+00007FF9BA240D70 Import   kernelbase.DeleteProcThreadAttributeList                    
+00007FF9BA240D78 Import   kernel32.DisconnectNamedPipe                                
+00007FF9BA240D80 Import   kernel32.DuplicateHandle                                    
+00007FF9BA240D88 Import   ntdll.EncodePointer                                         
+00007FF9BA240D90 Import   ntdll.EnterCriticalSection                                  
+00007FF9BA240D98 Import   kernel32.EnumSystemLocalesW                                 
+00007FF9BA240DA0 Import   kernel32.ExitProcess                                        
+00007FF9BA240DA8 Import   kernel32.ExpandEnvironmentStringsW                          
+00007FF9BA240DB0 Import   kernel32.FileTimeToSystemTime                               
+00007FF9BA240DB8 Import   kernel32.FindClose                                          
+00007FF9BA240DC0 Import   kernel32.FindFirstFileExW                                   
+00007FF9BA240DC8 Import   kernel32.FindFirstFileW                                     
+00007FF9BA240DD0 Import   kernel32.FindNextFileW                                      
+00007FF9BA240DD8 Import   kernel32.FlsAlloc                                           
+00007FF9BA240DE0 Import   kernel32.FlsFree                                            
+00007FF9BA240DE8 Import   kernel32.FlsGetValue                                        
+00007FF9BA240DF0 Import   kernel32.FlsSetValue                                        
+00007FF9BA240DF8 Import   kernel32.FlushFileBuffers                                   
+00007FF9BA240E00 Import   kernel32.FlushViewOfFile                                    
+00007FF9BA240E08 Import   kernel32.FormatMessageA                                     
+00007FF9BA240E10 Import   kernel32.FormatMessageW                                     
+00007FF9BA240E18 Import   kernel32.FreeEnvironmentStringsW                            
+00007FF9BA240E20 Import   kernel32.FreeLibrary                                        
+00007FF9BA240E28 Import   kernel32.FreeLibraryAndExitThread                           
+00007FF9BA240E30 Import   kernel32.GetACP                                             
+00007FF9BA240E38 Import   kernel32.GetCPInfo                                          
+00007FF9BA240E40 Import   kernel32.GetCommandLineA                                    
+00007FF9BA240E48 Import   kernel32.GetCommandLineW                                    
+00007FF9BA240E50 Import   kernel32.GetComputerNameExW                                 
+00007FF9BA240E58 Import   kernel32.GetConsoleMode                                     
+00007FF9BA240E60 Import   kernel32.GetConsoleOutputCP                                 
+00007FF9BA240E68 Import   kernel32.GetCurrencyFormatEx                                
+00007FF9BA240E70 Import   kernel32.GetCurrentDirectoryW                               
+00007FF9BA240E78 Import   kernel32.GetCurrentProcess                                  
+00007FF9BA240E80 Import   kernel32.GetCurrentProcessId                                
+00007FF9BA240E88 Import   kernel32.GetCurrentThread                                   
+00007FF9BA240E90 Import   kernel32.GetCurrentThreadId                                 
+00007FF9BA240E98 Import   kernel32.GetDateFormatW                                     
+00007FF9BA240EA0 Import   kernel32.GetDriveTypeW                                      
+00007FF9BA240EA8 Import   kernel32.GetDynamicTimeZoneInformation                      
+00007FF9BA240EB0 Import   kernel32.GetEnvironmentStringsW                             
+00007FF9BA240EB8 Import   kernel32.GetEnvironmentVariableW                            
+00007FF9BA240EC0 Import   kernel32.GetExitCodeProcess                                 
+00007FF9BA240EC8 Import   kernel32.GetFileAttributesExW                               
+00007FF9BA240ED0 Import   kernel32.GetFileAttributesW                                 
+00007FF9BA240ED8 Import   kernel32.GetFileInformationByHandle                         
+00007FF9BA240EE0 Import   kernel32.GetFileInformationByHandleEx                       
+00007FF9BA240EE8 Import   kernel32.GetFileSize                                        
+00007FF9BA240EF0 Import   kernel32.GetFileSizeEx                                      
+00007FF9BA240EF8 Import   kernel32.GetFileType                                        
+00007FF9BA240F00 Import   kernel32.GetFinalPathNameByHandleW                          
+00007FF9BA240F08 Import   kernel32.GetFullPathNameW                                   
+00007FF9BA240F10 Import   kernel32.GetGeoInfoW                                        
+00007FF9BA240F18 Import   kernel32.GetHandleInformation                               
+00007FF9BA240F20 Import   kernel32.GetLastError                                       
+00007FF9BA240F28 Import   kernel32.GetLocalTime                                       
+00007FF9BA240F30 Import   kernel32.GetLocaleInfoEx                                    
+00007FF9BA240F38 Import   kernel32.GetLocaleInfoW                                     
+00007FF9BA240F40 Import   kernel32.GetLogicalProcessorInformation                     
+00007FF9BA240F48 Import   kernel32.GetLongPathNameW                                   
+00007FF9BA240F50 Import   kernel32.GetModuleFileNameW                                 
+00007FF9BA240F58 Import   kernel32.GetModuleHandleA                                   
+00007FF9BA240F60 Import   kernel32.GetModuleHandleExA                                 
+00007FF9BA240F68 Import   kernel32.GetModuleHandleExW                                 
+00007FF9BA240F70 Import   kernel32.GetModuleHandleW                                   
+00007FF9BA240F78 Import   kernel32.GetNamedPipeClientProcessId                        
+00007FF9BA240F80 Import   kernel32.GetNamedPipeServerProcessId                        
+00007FF9BA240F88 Import   kernel32.GetNativeSystemInfo                                
+00007FF9BA240F90 Import   kernel32.GetNumberFormatEx                                  
+00007FF9BA240F98 Import   kernel32.GetOEMCP                                           
+00007FF9BA240FA0 Import   kernel32.GetOverlappedResult                                
+00007FF9BA240FA8 Import   kernel32.GetPriorityClass                                   
+00007FF9BA240FB0 Import   kernel32.GetProcAddress                                     
+00007FF9BA240FB8 Import   kernel32.GetProcessHeap                                     
+00007FF9BA240FC0 Import   kernel32.GetProcessId                                       
+00007FF9BA240FC8 Import   kernelbase.GetProcessMitigationPolicy                       
+00007FF9BA240FD0 Import   kernel32.GetProductInfo                                     
+00007FF9BA240FD8 Import   kernel32.GetQueuedCompletionStatus                          
+00007FF9BA240FE0 Import   kernel32.GetStartupInfoW                                    
+00007FF9BA240FE8 Import   kernel32.GetStdHandle                                       
+00007FF9BA240FF0 Import   kernel32.GetStringTypeW                                     
+00007FF9BA240FF8 Import   kernel32.GetSystemDirectoryW                                
+00007FF9BA241000 Import   kernel32.GetSystemInfo                                      
+00007FF9BA241008 Import   kernel32.GetSystemTimeAsFileTime                            
+00007FF9BA241010 Import   kernel32.GetSystemTimePreciseAsFileTime                     
+00007FF9BA241018 Import   kernel32.GetTempPathW                                       
+00007FF9BA241020 Import   kernel32.GetThreadContext                                   
+00007FF9BA241028 Import   kernel32.GetThreadId                                        
+00007FF9BA241030 Import   kernel32.GetThreadPriority                                  
+00007FF9BA241038 Import   kernel32.GetThreadPriorityBoost                             
+00007FF9BA241040 Import   kernel32.GetTickCount                                       
+00007FF9BA241048 Import   kernel32.GetTickCount64                                     
+00007FF9BA241050 Import   kernel32.GetTimeFormatW                                     
+00007FF9BA241058 Import   kernel32.GetTimeZoneInformation                             
+00007FF9BA241060 Import   kernel32.GetUserDefaultLCID                                 
+00007FF9BA241068 Import   kernel32.GetUserDefaultLangID                               
+00007FF9BA241070 Import   kernel32.GetUserGeoID                                       
+00007FF9BA241078 Import   kernel32.GetVersionExW                                      
+00007FF9BA241080 Import   kernel32.GetWindowsDirectoryW                               
+00007FF9BA241088 Import   kernel32.GlobalLock                                         
+00007FF9BA241090 Import   kernel32.GlobalMemoryStatusEx                               
+00007FF9BA241098 Import   kernel32.GlobalSize                                         
+00007FF9BA2410A0 Import   kernel32.GlobalUnlock                                       
+00007FF9BA2410A8 Import   ntdll.HeapAlloc                                             
+00007FF9BA2410B0 Import   kernel32.HeapDestroy                                        
+00007FF9BA2410B8 Import   kernel32.HeapFree                                           
+00007FF9BA2410C0 Import   kernel32.HeapLock                                           
+00007FF9BA2410C8 Import   ntdll.HeapReAlloc                                           
+00007FF9BA2410D0 Import   ntdll.HeapSize                                              
+00007FF9BA2410D8 Import   kernel32.HeapUnlock                                         
+00007FF9BA2410E0 Import   kernel32.HeapWalk                                           
+00007FF9BA2410E8 Import   kernelbase.InitOnceExecuteOnce                              
+00007FF9BA2410F0 Import   ntdll.InitializeConditionVariable                           
+00007FF9BA2410F8 Import   ntdll.InitializeCriticalSection                             
+00007FF9BA241100 Import   kernel32.InitializeCriticalSectionEx                        
+00007FF9BA241108 Import   kernelbase.InitializeProcThreadAttributeList                
+00007FF9BA241110 Import   ntdll.InitializeSListHead                                   
+00007FF9BA241118 Import   ntdll.InitializeSRWLock                                     
+00007FF9BA241120 Import   ntdll.InterlockedFlushSList                                 
+00007FF9BA241128 Import   ntdll.InterlockedPushEntrySList                             
+00007FF9BA241130 Import   kernel32.IsDebuggerPresent                                  
+00007FF9BA241138 Import   kernel32.IsProcessorFeaturePresent                          
+00007FF9BA241140 Import   kernel32.IsValidCodePage                                    
+00007FF9BA241148 Import   kernel32.IsValidLocale                                      
+00007FF9BA241150 Import   kernel32.IsWow64Process                                     
+00007FF9BA241158 Import   kernel32.K32GetModuleInformation                            
+00007FF9BA241160 Import   kernel32.K32GetProcessMemoryInfo                            
+00007FF9BA241168 Import   kernel32.K32QueryWorkingSetEx                               
+00007FF9BA241170 Import   kernel32.LCMapStringW                                       
+00007FF9BA241178 Import   ntdll.LeaveCriticalSection                                  
+00007FF9BA241180 Import   kernel32.LoadLibraryExA                                     
+00007FF9BA241188 Import   kernel32.LoadLibraryExW                                     
+00007FF9BA241190 Import   kernel32.LoadLibraryW                                       
+00007FF9BA241198 Import   kernel32.LocalAlloc                                         
+00007FF9BA2411A0 Import   kernel32.LocalFree                                          
+00007FF9BA2411A8 Import   kernel32.MapViewOfFile                                      
+00007FF9BA2411B0 Import   kernel32.MultiByteToWideChar                                
+00007FF9BA2411B8 Import   kernel32.OpenProcess                                        
+00007FF9BA2411C0 Import   kernel32.OutputDebugStringA                                 
+00007FF9BA2411C8 Import   kernel32.OutputDebugStringW                                 
+00007FF9BA2411D0 Import   kernel32.PostQueuedCompletionStatus                         
+00007FF9BA2411D8 Import   kernel32.Process32FirstW                                    
+00007FF9BA2411E0 Import   kernel32.Process32NextW                                     
+00007FF9BA2411E8 Import   kernel32.QueryFullProcessImageNameW                         
+00007FF9BA2411F0 Import   kernel32.QueryInformationJobObject                          
+00007FF9BA2411F8 Import   kernel32.QueryPerformanceCounter                            
+00007FF9BA241200 Import   kernel32.QueryPerformanceFrequency                          
+00007FF9BA241208 Import   kernel32.QueryThreadCycleTime                               
+00007FF9BA241210 Import   kernel32.RaiseException                                     
+00007FF9BA241218 Import   kernel32.ReadConsoleW                                       
+00007FF9BA241220 Import   kernel32.ReadDirectoryChangesW                              
+00007FF9BA241228 Import   kernel32.ReadFile                                           
+00007FF9BA241230 Import   kernel32.RegisterWaitForSingleObject                        
+00007FF9BA241238 Import   ntdll.ReleaseSRWLockExclusive                               
+00007FF9BA241240 Import   kernel32.RemoveDirectoryW                                   
+00007FF9BA241248 Import   kernel32.ResetEvent                                         
+00007FF9BA241250 Import   kernel32.ResolveLocaleName                                  
+00007FF9BA241258 Import   kernel32.ResumeThread                                       
+00007FF9BA241260 Import   kernel32.RtlCaptureContext                                  
+00007FF9BA241268 Import   kernel32.RtlCaptureStackBackTrace                           
+00007FF9BA241270 Import   kernel32.RtlLookupFunctionEntry                             
+00007FF9BA241278 Import   kernel32.RtlPcToFileHeader                                  
+00007FF9BA241280 Import   kernel32.RtlUnwind                                          
+00007FF9BA241288 Import   kernel32.RtlUnwindEx                                        
+00007FF9BA241290 Import   kernel32.RtlVirtualUnwind                                   
+00007FF9BA241298 Import   kernel32.SetCurrentDirectoryW                               
+00007FF9BA2412A0 Import   kernel32.SetEndOfFile                                       
+00007FF9BA2412A8 Import   kernel32.SetEnvironmentVariableW                            
+00007FF9BA2412B0 Import   kernel32.SetEvent                                           
+00007FF9BA2412B8 Import   kernel32.SetFileAttributesW                                 
+00007FF9BA2412C0 Import   kernel32.SetFilePointerEx                                   
+00007FF9BA2412C8 Import   kernel32.SetHandleInformation                               
+00007FF9BA2412D0 Import   kernel32.SetInformationJobObject                            
+00007FF9BA2412D8 Import   kernel32.SetLastError                                       
+00007FF9BA2412E0 Import   kernel32.SetStdHandle                                       
+00007FF9BA2412E8 Import   kernel32.SetThreadInformation                               
+00007FF9BA2412F0 Import   kernel32.SetThreadPriority                                  
+00007FF9BA2412F8 Import   kernel32.SetThreadPriorityBoost                             
+00007FF9BA241300 Import   kernel32.SetUnhandledExceptionFilter                        
+00007FF9BA241308 Import   kernel32.Sleep                                              
+00007FF9BA241310 Import   kernelbase.SleepConditionVariableSRW                        
+00007FF9BA241318 Import   kernel32.SleepEx                                            
+00007FF9BA241320 Import   kernel32.SuspendThread                                      
+00007FF9BA241328 Import   kernel32.SwitchToThread                                     
+00007FF9BA241330 Import   kernel32.SystemTimeToTzSpecificLocalTime                    
+00007FF9BA241338 Import   kernel32.TerminateProcess                                   
+00007FF9BA241340 Import   kernel32.TlsAlloc                                           
+00007FF9BA241348 Import   kernel32.TlsFree                                            
+00007FF9BA241350 Import   kernel32.TlsGetValue                                        
+00007FF9BA241358 Import   kernel32.TlsSetValue                                        
+00007FF9BA241360 Import   ntdll.TryAcquireSRWLockExclusive                            
+00007FF9BA241368 Import   kernel32.UnhandledExceptionFilter                           
+00007FF9BA241370 Import   kernel32.UnmapViewOfFile                                    
+00007FF9BA241378 Import   kernel32.UnregisterWaitEx                                   
+00007FF9BA241380 Import   kernelbase.UpdateProcThreadAttribute                        
+00007FF9BA241388 Import   kernel32.VirtualAlloc                                       
+00007FF9BA241390 Import   kernel32.VirtualFree                                        
+00007FF9BA241398 Import   kernel32.VirtualProtect                                     
+00007FF9BA2413A0 Import   kernel32.VirtualQuery                                       
+00007FF9BA2413A8 Import   kernel32.WaitForMultipleObjects                             
+00007FF9BA2413B0 Import   kernel32.WaitForSingleObject                                
+00007FF9BA2413B8 Import   ntdll.WakeAllConditionVariable                              
+00007FF9BA2413C0 Import   ntdll.WakeConditionVariable                                 
+00007FF9BA2413C8 Import   kernel32.WideCharToMultiByte                                
+00007FF9BA2413D0 Import   kernel32.WriteConsoleW                                      
+00007FF9BA2413D8 Import   kernel32.WriteFile                                          
+00007FF9BA2413E0 Import   kernel32.lstrcmpW                                           
+00007FF9BA2413E8 Import   kernel32.lstrcmpiW                                          
+00007FF9BA2413F8 Import   ntdll.NtClose                                               
+00007FF9BA241400 Import   ntdll.NtOpenKeyEx                                           
+00007FF9BA241408 Import   ntdll.NtQueryObject                                         
+00007FF9BA241410 Import   ntdll.NtQueryValueKey                                       
+00007FF9BA241418 Import   ntdll.RtlFormatCurrentUserKeyPath                           
+00007FF9BA241420 Import   ntdll.RtlFreeUnicodeString                                  
+00007FF9BA241428 Import   ntdll.RtlGetLastNtStatus                                    
+00007FF9BA241430 Import   ntdll.RtlInitUnicodeString                                  
